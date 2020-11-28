@@ -1,7 +1,7 @@
 <html>
 <body>
 <h1>Products</h1>
-
+<br>
 <?php
 echo '<ul>';
 foreach ($products as $product) {
