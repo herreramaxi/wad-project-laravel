@@ -30,7 +30,10 @@ Route::get('/test2', function () {
 
 Route::get('test', [TestController::class, 'getIndex']);
 Route::get('test3', [Test3Controller::class, 'getIndex']);
-Route::get('products',[ProductsController::class, 'getIndex']);
+
+Route::resource('products', ProductsController::class);
+
+// Route::get('products',[ProductsController::class, 'getIndex']);
 // Route::controller('test','TestController');
 // Route::get('/test3','Test3@getIndex');
 
