@@ -17,28 +17,27 @@
             </div>
         </div>
         <div class="form-group row">
+            <label for="productImageId" class="col-sm-3 col-form-label">Product Image</label>
+            <div class="col-sm-9">
+                <input name="image" type="file" id="productImageId" class="custom-file-input">
+                <span style="margin-left: 15px; width: 480px;" class="custom-file-control"></span>
+            </div>
+        </div>
+        <div class="form-group row">
             <div class="offset-sm-3 col-sm-9">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
 </form>
-<br>
-<br>
 
 <h1>Products</h1>
 <br>
-<?php
-echo '<ul>';
-foreach ($products as $product) {
-    echo '<li>' .
-        $product->id .
-        ', ' .
-        $product->name .
-        ', ' .
-        $product->description .
-        '</li>';
-}
-echo '</ul>';
-?>
+@foreach ($products as $product)
+    <li>{{ $product->name }}, {{ $product->description }},
+    @isset ($product->image)
+    <img class="card-img-top" style="max-width: 100px;" src="{{ Storage::url($product->image)  }}" alt="Card image cap">
+    @endisset
+    </li>
+@endforeach
 </body>
 </html>

@@ -49,7 +49,7 @@ class ProductsController extends Controller
         $product->name = request('name');
         $product->description = request('description');
         // $product->releasedate = request('releasedate');
-        // $product->image = request()->file('image')->store('public/images');
+        $product->image = request()->file('image')->store('public/images');
         $product->save();
 
         return back()->withInput();
