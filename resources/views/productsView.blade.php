@@ -33,11 +33,30 @@
 <h1>Products</h1>
 <br>
 @foreach ($products as $product)
-    <li>{{ $product->name }}, {{ $product->description }},
-    @isset ($product->image)
-    <img class="card-img-top" style="max-width: 100px;" src="{{ Storage::url($product->image)  }}" alt="Card image cap">
+    <li>{{ $product->name }}, {{ $product->description }}
+    @isset ($product->image) 
+        @php
+        $my_bytea = stream_get_contents($product->image);
+        @endphp
+        <img src="data:image/png;base64,{{$my_bytea}}" style="max-width: 40px;"/>
+    
     @endisset
+ 
     </li>
 @endforeach
+
+<!-- <h1>prueba</h1> -->
+ <?php 
+//  foreach ($products as $product) {
+    // echo 'product: ' . $product->name;
+    // if ($product->image) {
+    //     $my_bytea = stream_get_contents($product->image);
+    //     echo '<img src="data:image/png;base64,' . $my_bytea . '"/>';
+    // }
+
+    // echo '<li>' . $product->name . ', ' . '</li>';
+// } 
+?> 
+
 </body>
 </html>

@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
-
+use App\Http\Requests;
+use App\Models\Product;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Response;
 class ProductsController extends Controller
 {
     /**
@@ -16,9 +16,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::all();
-        // $products = DB::select(
-        //     'select id, name, description from public.products'
-        // );
+
         return view('productsView', ['products' => $products]);
     }
 
@@ -37,24 +35,23 @@ class ProductsController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */
+     */  
     public function store(Request $request)
     {
-        // var_dump(request('name'));
-        // var_dump(request('description'));
-
         $product = new Product();
 
         $product->id = Product::max('id') + 1; //Temporary: id is not being auto incremented
         $product->name = request('name');
         $product->description = request('description');
-        // $product->releasedate = request('releasedate');
-        $product->image = request()->file('image')->store('public/images');
-        $product->save();
+        $image = base64_encode(
+            file_get_contents($request->file('image')->getRealPath())
+        );
 
+        $product->image = $image;
+        $product->save();
         return back()->withInput();
     }
-
+       
     /**
      * Display the specified resource.
      *
@@ -63,7 +60,6 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**
