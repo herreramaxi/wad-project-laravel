@@ -17,7 +17,7 @@ class ProductsController extends Controller
     {
         $products = Product::all();
 
-        return view('productsView', ['products' => $products]);
+        return view('products.index', compact ('products'));
     }
 
     /**
@@ -58,8 +58,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
+        return view('products.edit', compact ('product'))->render();
     }
 
     /**
@@ -68,9 +69,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        return view('products.edit', compact ('product'))->render();      
     }
 
     /**
@@ -80,9 +81,25 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required'           
+        ]);
+        
+        $image = base64_encode(
+            file_get_contents($request->file('image')->getRealPath())
+        );
+
+        $product->name = request('name');
+        $product->description = request('description');
+        $product->image = $image;
+
+        $product->update();
+
+        return redirect()->route('products.index')
+            ->with('success', 'Product updated successfully');
     }
 
     /**

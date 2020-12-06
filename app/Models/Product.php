@@ -10,7 +10,13 @@ class Product extends Model
     use HasFactory;
      
 	public $table = 'products';
-	// public $fillable = ['name','description'];
+    // protected $fillable = [
+    //     'name',
+    //     'description',
+    //     'image',
+    //     'created_at'
+    // ];
+    // public $fillable = ['name','description'];
 	// public $primaryKey = 'id';
     // Timestamps
     public $timestamps = true;
