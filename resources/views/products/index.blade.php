@@ -50,25 +50,20 @@
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
 
-            <form method="post" action="{{ route('products.update', $product->id) }}" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                @method('PUT')
-
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Edit</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" id="editModalBody">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Update</button>
-                    </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </form>
+                <div class="modal-body" id="editModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" form="editModalForm" class="btn btn-primary">Update</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -76,23 +71,22 @@
     <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
-            <form method="post" action="{{ route('products.store') }}" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Create</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" id="createModalBody">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Create</button>
-                    </div>
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Create</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </form>
+                <div class="modal-body" id="createModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" form="createModalForm" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+
         </div>
     </div>
 

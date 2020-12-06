@@ -2,6 +2,9 @@
     <script src="{{ asset('js/app.js') }}" defer></script> -->
 <script src="{{ asset('js/products/edit.js') }}" defer></script>
 
+<form id="editModalForm" method="post" action="{{ route('products.update', $product->id) }}" enctype="multipart/form-data">
+    {{ csrf_field() }}
+    @method('PUT')
     <div class="row">
 
         <div class="col-md-6">
@@ -33,16 +36,15 @@
                     $my_bytea = stream_get_contents($product->image);
                     $imgSrc = "data:image/png;base64," . $my_bytea . "";
                     @endphp
-                    <img id="previewImage" src="{{$imgSrc}}" style="max-width: 100px;" />
+
                     @endisset
+
+                    <img id="previewImage" src="{{$imgSrc}}" style="max-width: 100px;" />
                 </div>
             </div>
             <div class="form-group row">
             </div>
         </div>
-
-    </div>
-
-
-
+            
+    </div>  
 </form>

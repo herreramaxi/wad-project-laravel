@@ -45,7 +45,7 @@ class ProductsController extends Controller
         $product->name = request('name');
         $product->description = request('description');
 
-        if (request('image')->isValid() &&  $request->file('image')) {
+        if (request('image') && request('image')->isValid() &&  $request->file('image')) {
             $image = base64_encode(
                 file_get_contents($request->file('image')->getRealPath())
             );
@@ -86,14 +86,16 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'name' => 'required',
             'description' => 'required',
         ]);
 
-        if (request('image') && request('image')->isValid() &&  $request->file('image')) {
+         $product =  Product::findOrFail($id);       
+         
+         if (request('image') && request('image')->isValid() &&  $request->file('image')) {
             $image = base64_encode(
                 file_get_contents($request->file('image')->getRealPath())
             );
