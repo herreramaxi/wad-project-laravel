@@ -45,7 +45,11 @@ class ProductsController extends Controller
         $product->name = request('name');
         $product->description = request('description');
 
-        if (request('image') && request('image')->isValid() &&  $request->file('image')) {
+        if (
+            request('image') &&
+            request('image')->isValid() &&
+            $request->file('image')
+        ) {
             $image = base64_encode(
                 file_get_contents($request->file('image')->getRealPath())
             );
@@ -93,16 +97,20 @@ class ProductsController extends Controller
             'description' => 'required',
         ]);
 
-         $product =  Product::findOrFail($id);       
-         
-         if (request('image') && request('image')->isValid() &&  $request->file('image')) {
+        $product = Product::findOrFail($id);
+
+        if (
+            request('image') &&
+            request('image')->isValid() &&
+            $request->file('image')
+        ) {
             $image = base64_encode(
                 file_get_contents($request->file('image')->getRealPath())
             );
 
             $product->image = $image;
         }
-        
+
         $product->name = request('name');
         $product->description = request('description');
 
@@ -119,8 +127,12 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return redirect()
+            ->route('products.index')
+            ->with('success', 'Product deleted successfully');
     }
 }

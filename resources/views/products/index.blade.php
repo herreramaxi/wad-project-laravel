@@ -30,7 +30,8 @@
 
     <br>
     @foreach ($products as $product)
-    <li>{{ $product->name }}, {{ $product->description }}
+    <div class="row">
+        {{ $product->name }}, {{ $product->description }}
         @isset ($product->image)
         @php
         $my_bytea = stream_get_contents($product->image);
@@ -42,7 +43,15 @@
             data-attr="{{ route('products.edit', $product->id) }}">
             <i class="fas fa-edit text-gray-300"></i>
         </a>
-    </li>
+        <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" title="delete" style="border: none; background-color:transparent;">
+                <i class="fas fa-trash fa-lg text-danger"></i>
+            </button>
+        </form>
+
+    </div>
     @endforeach
 
     <!-- edit modal -->
