@@ -17,7 +17,7 @@ class ProductsController extends Controller
     {
         $products = Product::all();
 
-        return view('products.index', compact ('products'));
+        return view('products.index', compact('products'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create')->render();
     }
 
     /**
@@ -35,7 +35,8 @@ class ProductsController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */  
+     */
+
     public function store(Request $request)
     {
         $product = new Product();
@@ -43,15 +44,19 @@ class ProductsController extends Controller
         $product->id = Product::max('id') + 1; //Temporary: id is not being auto incremented
         $product->name = request('name');
         $product->description = request('description');
-        $image = base64_encode(
-            file_get_contents($request->file('image')->getRealPath())
-        );
 
-        $product->image = $image;
+        if (request('image')->isValid() &&  $request->file('image')) {
+            $image = base64_encode(
+                file_get_contents($request->file('image')->getRealPath())
+            );
+
+            $product->image = $image;
+        }
+
         $product->save();
         return back()->withInput();
     }
-       
+
     /**
      * Display the specified resource.
      *
@@ -60,7 +65,7 @@ class ProductsController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.edit', compact ('product'))->render();
+        return view('products.edit', compact('product'))->render();
     }
 
     /**
@@ -71,7 +76,7 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit', compact ('product'))->render();      
+        return view('products.edit', compact('product'))->render();
     }
 
     /**
@@ -85,20 +90,24 @@ class ProductsController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'description' => 'required'           
+            'description' => 'required',
         ]);
-        
-        $image = base64_encode(
-            file_get_contents($request->file('image')->getRealPath())
-        );
 
+        if (request('image') && request('image')->isValid() &&  $request->file('image')) {
+            $image = base64_encode(
+                file_get_contents($request->file('image')->getRealPath())
+            );
+
+            $product->image = $image;
+        }
+        
         $product->name = request('name');
         $product->description = request('description');
-        $product->image = $image;
 
         $product->update();
 
-        return redirect()->route('products.index')
+        return redirect()
+            ->route('products.index')
             ->with('success', 'Product updated successfully');
     }
 

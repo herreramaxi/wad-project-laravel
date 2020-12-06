@@ -16,5 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sourceMaps();
 
 mix.copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts');
-mix.js('resources/js/products.js', 'public/js');
+mix.js('resources/js/products/index.js', 'public/js/products');
+mix.js('resources/js/products/edit.js', 'public/js/products');
+mix.js('resources/js/products/create.js', 'public/js/products');
 //.sourceMaps(); //adding debugging information

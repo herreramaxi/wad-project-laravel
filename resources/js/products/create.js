@@ -36,7 +36,7 @@ function readURL(input) {
         var reader = new FileReader();
 
         reader.onload = function(e) {
-            $('#category-img-tag').attr('src', e.target.result);
+            $('#previewImage').attr('src', e.target.result);
         }
 
         reader.readAsDataURL(input.files[0]);

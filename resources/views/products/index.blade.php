@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset="utf-8">
 
@@ -6,65 +7,95 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/products.js') }}" defer></script>
+    <script src="{{ asset('js/products/index.js') }}" defer></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2>Products</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-success text-light" data-toggle="modal" id="createModalButton"
+                    data-target="#createModal" data-attr="{{ route('products.create') }}" title="Create a product"> <i
+                        class="fas fa-plus-circle"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
-<h1>Products</h1>
-<br>
-@foreach ($products as $product)
+    <br>
+    @foreach ($products as $product)
     <li>{{ $product->name }}, {{ $product->description }}
-    @isset ($product->image) 
+        @isset ($product->image)
         @php
         $my_bytea = stream_get_contents($product->image);
         @endphp
-        <img src="data:image/png;base64,{{$my_bytea}}" style="max-width: 40px;"/>    
-    @endisset
-  
-    <!-- <a href="{{ route('products.show', $product->id) }}">
-                            <i class="fas fa-edit  fa-lg"></i>
+        <img src="data:image/png;base64,{{$my_bytea}}" style="max-width: 40px;" />
+        @endisset
 
-                        </a> -->
-                        
-    <a class="text-secondary" data-toggle="modal" id="mediumButton" data-target="#mediumModal"
-                                data-attr="{{ route('products.edit', $product->id) }}">
-                                <i class="fas fa-edit text-gray-300"></i>
-                            </a>
+        <a class="text-secondary" data-toggle="modal" id="editModalButton" data-target="#editModal"
+            data-attr="{{ route('products.edit', $product->id) }}">
+            <i class="fas fa-edit text-gray-300"></i>
+        </a>
     </li>
-@endforeach
+    @endforeach
 
-<!-- <h1>prueba</h1> -->
- <?php
-//  foreach ($products as $product) {
-// echo 'product: ' . $product->name;
-// if ($product->image) {
-//     $my_bytea = stream_get_contents($product->image);
-//     echo '<img src="data:image/png;base64,' . $my_bytea . '"/>';
-// }
-
-// echo '<li>' . $product->name . ', ' . '</li>';
-// }
-?> 
-
-    <!-- medium modal -->
-    <div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+    <!-- edit modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+        <div class="modal-dialog modal-lg" role="document">
+
+            <form method="post" action="{{ route('products.update', $product->id) }}" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                @method('PUT')
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="editModalBody">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
                 </div>
-                <div class="modal-body" id="mediumBody">
-                                  </div>
-            </div>
+            </form>
         </div>
-    </div>        
-   
+    </div>
+
+    <!-- create modal -->
+    <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form method="post" action="{{ route('products.store') }}" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Create</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="createModalBody">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
+
 </html>
