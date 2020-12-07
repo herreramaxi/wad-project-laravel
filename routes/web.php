@@ -4,6 +4,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\Test3Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductsClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::get('test', [TestController::class, 'getIndex']);
 Route::get('test3', [Test3Controller::class, 'getIndex']);
 
 Route::resource('products', ProductsController::class);
+
+Route::get('productsClient', [ProductsClientController::class, 'getIndex']);
 
 // Route::get('products',[ProductsController::class, 'getIndex']);
 // Route::controller('test','TestController');
