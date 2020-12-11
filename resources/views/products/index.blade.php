@@ -34,7 +34,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <span class="font-weight-bold"> {{ $product->name }}</span>
-                            <span class="font-weight-bold"> price </span> </div>
+                            <span class="font-weight-bold"> {{ $product->price }} </span> </div>
                         <p class="card-text mb-1 mt-1">{{ $product->description }}</p>
                     </div>
 

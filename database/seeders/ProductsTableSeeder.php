@@ -20,8 +20,8 @@ class ProductsTableSeeder extends Seeder
 
         for ($i = 0; $i < 10; $i++) {
             DB::statement(
-                "insert into products(id, name, description, image) values(".$i.
-                ",'product "  .$i . "', 'description ". $i . "','".
+                "insert into products(id, name, description, price ,image) values(".$i.
+                ",'product "  .$i . "', 'description ". $i . "','". $i * 10 . "','".
                 $imageNotAvailable ."') ");
         }
     }

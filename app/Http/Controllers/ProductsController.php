@@ -44,6 +44,7 @@ class ProductsController extends Controller
         $product->id = Product::max('id') + 1; //Temporary: id is not being auto incremented
         $product->name = request('name');
         $product->description = request('description');
+        $product->price = request('price');
 
         if (
             request('image') &&
@@ -92,10 +93,11 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-        ]);
+        //TODO: move validations to view
+        // $request->validate([
+        //     'name' => 'required',
+        //     'description' => 'required',
+        // ]);
 
         $product = Product::findOrFail($id);
 
@@ -113,6 +115,7 @@ class ProductsController extends Controller
 
         $product->name = request('name');
         $product->description = request('description');
+        $product->price = request('price');
 
         $product->update();
 

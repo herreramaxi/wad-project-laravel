@@ -17,6 +17,12 @@
                         placeholder="Description">
                 </div>
             </div>
+            <div class="form-group row">
+                <label for="priceId" class="col-sm-3 col-form-label">Description</label>
+                <div class="col-sm-9">
+                    <input name="price" type="text" class="form-control" id="priceId" placeholder="Price">
+                </div>
+            </div>
         </div>
 
         <div class="col-md-6">
