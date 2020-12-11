@@ -1,15 +1,15 @@
 {
     "items": [{
-            "name": "Home"
+            "name": "Menus",
+            "href": "productsClient"
         },
         {
-            "name": "Admin"
+            "name": "Admin",
+            "href": "products"
         },
         {
-            "name": "Products"
-        },
-        {
-            "name": "Contact"
+            "name": "Test",
+            "href": "home"
         }
     ]
 }
