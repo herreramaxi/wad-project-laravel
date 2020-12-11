@@ -1,0 +1,15 @@
+{
+    "items": [{
+            "name": "Home"
+        },
+        {
+            "name": "Admin"
+        },
+        {
+            "name": "Products"
+        },
+        {
+            "name": "Contact"
+        }
+    ]
+}
