@@ -22,14 +22,9 @@
 
             <div class="col-md-4">
                 <div class="card">
-                    @isset ($product->image)
-                    @php
-                    $my_bytea = stream_get_contents($product->image);
-                    @endphp
-                    <img src="data:image/png;base64,{{$my_bytea}}" class="card-img-top"
-                        style="min-height: 275px;max-height: 275px;" />
-                    @endisset
 
+                    <img src="{{getImageSrc($product)}}" class="card-img-top"
+                        style="min-height: 275px;max-height: 275px;" />
 
                     <div class="card-body">
                         <div class="d-flex justify-content-between">

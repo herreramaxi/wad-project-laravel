@@ -33,20 +33,9 @@
 
         <div class="col-md-6">
             <div class="form-group row">
-
                 <div class="custom-file">
                     <input id="inputFileId" type="file" class="form-control" name="image">
-
-                    @php $imgSrc =""; @endphp
-                    @isset ($product->image)
-                    @php
-                    $my_bytea = stream_get_contents($product->image);
-                    $imgSrc = "data:image/png;base64," . $my_bytea . "";
-                    @endphp
-
-                    @endisset
-
-                    <img id="previewImage" src="{{$imgSrc}}" style="max-width: 100px;" />
+                    <img id="previewImage" src="{{getImageSrc($product)}}" style="max-width: 100px;" />
                 </div>
             </div>
             <div class="form-group row">
