@@ -7,18 +7,18 @@
 echo getcwd ( ) ;
 $path = "storage/navData.json";
  echo $path;
- $json = json_decode(file_get_contents($path), true);
+//  $json = json_decode(file_get_contents($path), true);
 
 
-$output = "<ul>";
-    foreach ($json['items'] as $movie) {
-        $output .= "<li>"
-            . $movie['name'] 
-            . "</li>";
-    }
-    $output .= "</ul>";
+// $output = "<ul>";
+//     foreach ($json['items'] as $movie) {
+//         $output .= "<li>"
+//             . $movie['name'] 
+//             . "</li>";
+//     }
+//     $output .= "</ul>";
 
-    echo $output;
+//     echo $output;
 
 @endphp
 
