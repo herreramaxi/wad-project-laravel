@@ -18,8 +18,13 @@ use App\Http\Controllers\ProductsClientController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
+
 
 Route::get('/testview', function () {
     return view('testView');
