@@ -1,14 +1,14 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+namespace App\Http\Controllers;
+use App\Models\Product;
 
 class ProductsClientController extends Controller
 {
     public function getIndex()
-    { return  view('productsClient.index') ;
-       
-         }
+    {
+        $products = Product::orderBy('name')->get();
 
+        return view('productsClient.index', compact('products'));
+    }
 }
