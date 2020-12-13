@@ -26,7 +26,7 @@ class ProductsTableSeeder extends Seeder
                     $i .
                     ",'product " .
                     $i .
-                    "', 'description " .
+                    "', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium. " .
                     $i .
                     "','" .
                     $i * 10 .
