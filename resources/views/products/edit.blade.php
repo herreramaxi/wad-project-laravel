@@ -30,8 +30,8 @@
             <div class="form-group row">
                 <label for="descriptionId" class="col-sm-3 col-form-label">Description</label>
                 <div class="col-sm-9">
-                    <textarea name="description" value="{{ $product->description }}" class="form-control"
-                        id="descriptionId" placeholder="Description" maxlength="512" rows="6" required></textarea>
+                    <textarea name="description" class="form-control" id="descriptionId" placeholder="Description"
+                        maxlength="512" rows="6" required>{{ $product->description }}</textarea>
                     <div class="invalid-feedback">
                         Please provide a product description.
                     </div>
