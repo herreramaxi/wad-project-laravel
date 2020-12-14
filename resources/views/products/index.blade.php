@@ -18,13 +18,13 @@
     </section>
     <br>
     <div class="d-flex justify-content-between p-3 bg-white mb-3 align-items-center">
-        <div class="row g-3">
+        <div class="row g-4">
             @foreach ($products as $product)
 
-            <div class="col-md-4">
+            <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
 
-                    <img src="{{getImageSrc($product)}}" class="card-img-top" style="min-height: 275px;max-height: 275px;" />
+                    <img src="{{getImageSrc($product)}}" class="card-img-top" />
 
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
