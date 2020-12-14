@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/js/products/create.js": "/js/products/create.js",
     "/js/products/edit.js": "/js/products/edit.js",
-    "/js/products/index.js": "/js/products/index.js"
+    "/js/products/index.js": "/js/products/index.js",
+    "/js/productsClient/index.js": "/js/productsClient/index.js"
 }
