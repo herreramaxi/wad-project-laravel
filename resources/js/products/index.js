@@ -79,10 +79,10 @@ function search() {
         success: function(response) {
             $("#response").html(response);
         },
-        complete: function() {
+        complete: function(jqXHR, textStatus) {
             spinner.hide();
         },
-        error: function(xhr) {
+        error: function(xhr, status, error) {
             //Do Something to handle error
         }
     });
