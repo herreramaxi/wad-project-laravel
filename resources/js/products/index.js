@@ -10,15 +10,15 @@ $(document).on("click", ".editModalButton", function(event) {
         },
         // return the result
         success: function(result) {
-            $("#editModalBody")
-                .html(result)
-                .show();
+            $("#editModalBody").html(result);
+            // .show();
 
+            hide();
             $("#editModal").modal("show");
         },
-        complete: function() {
-            hide();
-        },
+        // complete: function() {
+        //     hide();
+        // },
         error: function(xhr, status, error) {
             if (status == 404) {
                 console.log(error);
@@ -42,15 +42,15 @@ $(document).on("click", ".createModalButton", function(event) {
         },
         // return the result
         success: function(result) {
-            $("#createModalBody")
-                .html(result)
-                .show();
+            $("#createModalBody").html(result);
+            // .show();
 
+            hide();
             $("#createModal").modal("show");
         },
-        complete: function() {
-            hide();
-        },
+        // complete: function() {
+        //     hide();
+        // },
         error: function(xhr, status, error) {
             if (status == 404) {
                 console.log(error);

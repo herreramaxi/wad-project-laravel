@@ -34,16 +34,17 @@ function ProcessSubmit(e, form, modalId) {
             processData: false,
             method: "POST",
             beforeSend: function() {
-                spinner.show();
+                // spinner.show();
             },
             success: function(data) {
+                //TODO: Add loading in button
                 $("#response").html(data);
                 $(modalId).modal("hide");
             },
             error: function(jqXHR, textStatus, errorThrown) {},
-            complete: function(jqXHR, textStatus) {
-                spinner.hide();
-            }
+            // complete: function(jqXHR, textStatus) {
+            //     spinner.hide();
+            // }
         });
     }
 
