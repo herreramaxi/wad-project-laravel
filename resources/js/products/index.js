@@ -8,17 +8,12 @@ $(document).on("click", ".editModalButton", function(event) {
         beforeSend: function() {
             show();
         },
-        // return the result
         success: function(result) {
             $("#editModalBody").html(result);
-            // .show();
-
+      
             hide();
             $("#editModal").modal("show");
         },
-        // complete: function() {
-        //     hide();
-        // },
         error: function(xhr, status, error) {
             if (status == 404) {
                 console.log(error);
@@ -26,9 +21,7 @@ $(document).on("click", ".editModalButton", function(event) {
             } else {
                 alert("Error when trying to load the product");
             }
-            //   alert("Page " + href + " cannot open. Error:" + error);
         }
-        // timeout: 8000
     });
 });
 
@@ -40,17 +33,12 @@ $(document).on("click", ".createModalButton", function(event) {
         beforeSend: function() {
             show();
         },
-        // return the result
         success: function(result) {
-            $("#createModalBody").html(result);
-            // .show();
+            $("#createModalBody").html(result);           
 
             hide();
             $("#createModal").modal("show");
         },
-        // complete: function() {
-        //     hide();
-        // },
         error: function(xhr, status, error) {
             if (status == 404) {
                 console.log(error);
@@ -58,9 +46,38 @@ $(document).on("click", ".createModalButton", function(event) {
             } else {
                 alert("Error when trying to load create view");
             }
-            //   alert("Page " + href + " cannot open. Error:" + error);
         }
-        // timeout: 8000
+    });
+});
+
+$(document).on("click", ".deleteModalButton", function(event) {
+    event.preventDefault();
+    let href = $(this).attr("data-attr");
+
+    $("#deleteModalForm").attr("action", href);
+    $("#deleteModal").modal("show");
+});
+
+$("#deleteModalForm").on("submit", function(e) {
+    e.preventDefault();
+
+    let action = $(this).attr("action");
+
+    $.ajax({
+        url: action,
+        cache: false,
+        contentType: false,
+        processData: false,
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
+        method: "DELETE",      
+        success: function(data) {
+            //TODO: Add loading in button
+            $("#response").html(data);
+            $("#deleteModal").modal("hide");
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert("Error when trying to delete a product");
+        }       
     });
 });
 
@@ -78,12 +95,10 @@ function search() {
         },
         success: function(response) {
             $("#response").html(response);
-        },
-        complete: function(jqXHR, textStatus) {
             hide();
         },
         error: function(xhr, status, error) {
-            //Do Something to handle error
+            alert("Error when trying to search products");
         }
     });
 }

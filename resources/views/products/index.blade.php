@@ -3,7 +3,7 @@
 <script src="{{ asset('js/products/index.js') }}" defer></script>
 <link href="{{ asset('css/products/index.css') }}" rel="stylesheet">
 
-<h1>Menus Admin</h1>
+<h1>Admin</h1>
 
 <div class="row">
 
@@ -62,6 +62,34 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<!-- delete modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="deleteModalForm" method="post">
+                    {{ csrf_field() }}
+                    @method('DELETE')
+                    <div class="alert alert-danger" role="alert">
+                        Are you sure you want to delete this product?
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" form="deleteModalForm" class="btn btn-primary">Delete</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>
 @stop

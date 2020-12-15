@@ -17,20 +17,22 @@
 
                 <hr>
 
-                <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <div class="card-body">
-                        <div class="text-right buttons">
-                            <button class="btn btn-primary editModalButton" data-toggle="modal"
-                                {{-- data-target="#editModal" --}}
-                                data-attr="{{ route('products.edit', $product->id) }}">Update</button>
+                {{-- <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+                @csrf
+                @method('DELETE') --}}
+                <div class="card-body">
+                    <div class="text-right buttons">
+                        <button class="btn btn-primary editModalButton" data-toggle="modal"
+                            {{-- data-target="#editModal" --}}
+                            data-attr="{{ route('products.edit', $product->id) }}">Update</button>
+                      
+                  
+                        <button class="btn btn-danger deleteModalButton" data-toggle="modal" data-target="#deleteModal"
+                            data-attr="{{ route('products.destroy', $product->id) }}">Delete</button>
 
-                            <button type="submit" class="btn btn-danger">Delete</button>
-
-                        </div>
                     </div>
-                </form>
+                </div>
+                {{-- </form> --}}
             </div>
         </div>
         @endforeach

@@ -140,12 +140,14 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
+        $product = Product::findOrFail($id);
         $product->delete();
-
-        return redirect()
-            ->route('products.index')
-            ->with('success', 'Product deleted successfully');
+        $products = Product::orderBy('name')->get();
+        return view('products.partialProductList', compact('products'));      
+        // return redirect()
+        //     ->route('products.index')
+        //     ->with('success', 'Product deleted successfully');
     }
 }

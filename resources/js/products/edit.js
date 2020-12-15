@@ -41,7 +41,7 @@ function ProcessSubmit(e, form, modalId) {
                 $("#response").html(data);
                 $(modalId).modal("hide");
             },
-            error: function(jqXHR, textStatus, errorThrown) {},
+            error: function(jqXHR, textStatus, errorThrown) {}
             // complete: function(jqXHR, textStatus) {
             //     spinner.hide();
             // }
