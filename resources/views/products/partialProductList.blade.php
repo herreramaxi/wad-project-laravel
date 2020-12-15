@@ -22,7 +22,7 @@
                     @method('DELETE')
                     <div class="card-body">
                         <div class="text-right buttons">
-                            <button class="btn btn-primary" data-toggle="modal" id="editModalButton"
+                            <button class="btn btn-primary editModalButton" data-toggle="modal"
                                 {{-- data-target="#editModal" --}}
                                 data-attr="{{ route('products.edit', $product->id) }}">Update</button>
 

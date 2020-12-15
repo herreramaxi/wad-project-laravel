@@ -1,6 +1,6 @@
 const spinner = require("./../spinner");
 
-$(document).on("click", "#editModalButton", function(event) {
+$(document).on("click", ".editModalButton", function(event) {
     event.preventDefault();
     let href = $(this).attr("data-attr");
     $.ajax({
@@ -32,7 +32,7 @@ $(document).on("click", "#editModalButton", function(event) {
     });
 });
 
-$(document).on("click", "#createModalButton", function(event) {
+$(document).on("click", ".createModalButton", function(event) {
     event.preventDefault();
     let href = $(this).attr("data-attr");
     $.ajax({

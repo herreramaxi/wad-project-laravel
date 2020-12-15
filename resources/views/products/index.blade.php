@@ -9,7 +9,7 @@
 
     <div class="col-md-1">
 
-        <button class="btn btn-success" data-toggle="modal" id="createModalButton"
+        <button class="btn btn-success createModalButton" data-toggle="modal"
             data-attr="{{ route('products.create') }}">Create</button>
     </div>
     <div class="col-md-9"></div>
