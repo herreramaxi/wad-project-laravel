@@ -37,6 +37,7 @@ Route::get('/test2', function () {
 Route::get('test', [TestController::class, 'getIndex']);
 Route::get('test3', [Test3Controller::class, 'getIndex']);
 
+Route::get('products/search/{name?}', [ProductsController::class, 'search']);
 Route::resource('products', ProductsController::class);
 
 Route::get('productsClient', [ProductsClientController::class, 'getIndex']);

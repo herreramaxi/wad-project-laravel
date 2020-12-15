@@ -10,4 +10,10 @@ class Test3Controller extends Controller
     {
         echo 'test3';
     }
+
+    public function search(Request $request)
+    {
+        echo 'asdas';
+
+    }
 }

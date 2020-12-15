@@ -15,9 +15,24 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('name')->get();
+        return view('products.index');
+    }
 
-        return view('products.index', compact('products'));
+    public function search(Request $request)
+    {
+        $products = null;
+        
+        if ($request->has('name')) {
+            $products = Product::orderBy('name')
+                ->where('name', 'like', '%' . request('name') . '%')
+                ->get();
+        }
+
+        if ($products == null) {
+            $products = Product::orderBy('name')->get();
+        }
+
+        return view('products.partialProductList', compact('products'));
     }
 
     /**
@@ -93,12 +108,6 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //TODO: move validations to view
-        // $request->validate([
-        //     'name' => 'required',
-        //     'description' => 'required',
-        // ]);
-
         $product = Product::findOrFail($id);
 
         if (
