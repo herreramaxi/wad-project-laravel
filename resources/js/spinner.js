@@ -5,7 +5,7 @@ module.exports = {
     hide: function() {
         setTimeout(function() {
             $("#modalSpinner").modal("hide");
-        }, 250);
+        }, 500);
         // $("#modalSpinner").css('display', 'none');
         // $("#modalSpinner").modal("hide");
         // $('#modalSpinner').on('shown.bs.modal', function(e) {
