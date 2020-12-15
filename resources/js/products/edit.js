@@ -47,7 +47,7 @@ function ProcessSubmit(e, form, modalId) {
         });
     }
 
-    this.classList.add("was-validated");
+    form.classList.add("was-validated");
 }
 
 $("#editModalForm").on("submit", function(e) {
