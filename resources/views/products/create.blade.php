@@ -1,5 +1,5 @@
 <script src="{{ asset('js/products/edit.js') }}" defer></script>
-
+{{-- <script src="{{ asset('js/products/create.js') }}" defer></script> --}}
 <form id="createModalForm" method="post" action="{{ route('products.store') }}" enctype="multipart/form-data"
     class="needs-validation" novalidate>
     {{ csrf_field() }}

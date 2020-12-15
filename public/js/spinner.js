@@ -81,30 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/products/create.js":
-/*!*****************************************!*\
-  !*** ./resources/js/products/create.js ***!
-  \*****************************************/
+/***/ "./resources/js/spinner.js":
+/*!*********************************!*\
+  !*** ./resources/js/spinner.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$('#createModalForm').on('submit', function (e) {\n  e.preventDefault();\n  var formData = new FormData(this);\n  $.post($(this).attr('action'), formData, function (data) {\n    var d = data;\n  });\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvcHJvZHVjdHMvY3JlYXRlLmpzPzEyYTgiXSwibmFtZXMiOlsiJCIsIm9uIiwiZSIsInByZXZlbnREZWZhdWx0IiwiZm9ybURhdGEiLCJGb3JtRGF0YSIsInBvc3QiLCJhdHRyIiwiZGF0YSIsImQiXSwibWFwcGluZ3MiOiJBQUFBQSxDQUFDLENBQUMsa0JBQUQsQ0FBRCxDQUFzQkMsRUFBdEIsQ0FBeUIsUUFBekIsRUFBbUMsVUFBU0MsQ0FBVCxFQUFZO0FBQzNDQSxHQUFDLENBQUNDLGNBQUY7QUFDQSxNQUFJQyxRQUFRLEdBQUcsSUFBSUMsUUFBSixDQUFhLElBQWIsQ0FBZjtBQUVBTCxHQUFDLENBQUNNLElBQUYsQ0FBT04sQ0FBQyxDQUFDLElBQUQsQ0FBRCxDQUFRTyxJQUFSLENBQWEsUUFBYixDQUFQLEVBQStCSCxRQUEvQixFQUF5QyxVQUFTSSxJQUFULEVBQWU7QUFDcEQsUUFBSUMsQ0FBQyxHQUFHRCxJQUFSO0FBRUgsR0FIRDtBQUlILENBUkQiLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvcHJvZHVjdHMvY3JlYXRlLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiJCgnI2NyZWF0ZU1vZGFsRm9ybScpLm9uKCdzdWJtaXQnLCBmdW5jdGlvbihlKSB7XHJcbiAgICBlLnByZXZlbnREZWZhdWx0KClcclxuICAgIHZhciBmb3JtRGF0YSA9IG5ldyBGb3JtRGF0YSh0aGlzKVxyXG5cclxuICAgICQucG9zdCgkKHRoaXMpLmF0dHIoJ2FjdGlvbicpLCBmb3JtRGF0YSwgZnVuY3Rpb24oZGF0YSkge1xyXG4gICAgICAgIHZhciBkID0gZGF0YTtcclxuXHJcbiAgICB9KVxyXG59KSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/products/create.js\n");
+eval("function showSpinner() {\n  $('#modalSpinner').modal('show');\n}\n\nfunction hideSpinner() {\n  $('#modalSpinner').modal('hide');\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvc3Bpbm5lci5qcz8zNTQwIl0sIm5hbWVzIjpbInNob3dTcGlubmVyIiwiJCIsIm1vZGFsIiwiaGlkZVNwaW5uZXIiXSwibWFwcGluZ3MiOiJBQUFBLFNBQVNBLFdBQVQsR0FBdUI7QUFDbkJDLEdBQUMsQ0FBQyxlQUFELENBQUQsQ0FBbUJDLEtBQW5CLENBQXlCLE1BQXpCO0FBQ0g7O0FBRUQsU0FBU0MsV0FBVCxHQUF1QjtBQUNuQkYsR0FBQyxDQUFDLGVBQUQsQ0FBRCxDQUFtQkMsS0FBbkIsQ0FBeUIsTUFBekI7QUFDSCIsImZpbGUiOiIuL3Jlc291cmNlcy9qcy9zcGlubmVyLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZnVuY3Rpb24gc2hvd1NwaW5uZXIoKSB7XHJcbiAgICAkKCcjbW9kYWxTcGlubmVyJykubW9kYWwoJ3Nob3cnKTtcclxufVxyXG5cclxuZnVuY3Rpb24gaGlkZVNwaW5uZXIoKSB7XHJcbiAgICAkKCcjbW9kYWxTcGlubmVyJykubW9kYWwoJ2hpZGUnKTtcclxufSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/spinner.js\n");
 
 /***/ }),
 
-/***/ 3:
-/*!***********************************************!*\
-  !*** multi ./resources/js/products/create.js ***!
-  \***********************************************/
+/***/ 5:
+/*!***************************************!*\
+  !*** multi ./resources/js/spinner.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\dev\heroku_laravel\resources\js\products\create.js */"./resources/js/products/create.js");
+module.exports = __webpack_require__(/*! C:\dev\heroku_laravel\resources\js\spinner.js */"./resources/js/spinner.js");
 
 
 /***/ })

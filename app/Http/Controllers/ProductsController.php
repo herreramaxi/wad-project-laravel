@@ -74,7 +74,9 @@ class ProductsController extends Controller
         }
 
         $product->save();
-        return back()->withInput();
+        // return back()->withInput();
+        $products = Product::orderBy('name')->get();
+        return view('products.partialProductList', compact('products'));   
     }
 
     /**
@@ -128,9 +130,8 @@ class ProductsController extends Controller
 
         $product->update();
 
-        return redirect()
-            ->route('products.index')
-            ->with('success', 'Product updated successfully');
+        $products = Product::orderBy('name')->get();
+        return view('products.partialProductList', compact('products'));      
     }
 
     /**

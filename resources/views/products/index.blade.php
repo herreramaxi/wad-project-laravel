@@ -3,21 +3,18 @@
 <script src="{{ asset('js/products/index.js') }}" defer></script>
 <link href="{{ asset('css/products/index.css') }}" rel="stylesheet">
 
-{{-- <div class="row"> --}}
 <h1>Menus Admin</h1>
 
 <div class="row">
 
     <div class="col-md-1">
 
-        <button class="btn btn-success" data-toggle="modal" id="createModalButton" data-target="#createModal"
+        <button class="btn btn-success" data-toggle="modal" id="createModalButton"
             data-attr="{{ route('products.create') }}">Create</button>
     </div>
     <div class="col-md-9"></div>
     <div class="col-md-2">
-        {{-- <form class="" action="{{ route('products.index') }}" method="GET" role="search"> --}}
-        <input class="form-control" id="searchInput" name="name" type="search" placeholder="Search..">
-        {{-- </form> --}}
+        <input class="form-control" id="searchInput" name="name" type="search" placeholder="Search...">
     </div>
 </div>
 <br />

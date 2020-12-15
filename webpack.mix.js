@@ -20,5 +20,7 @@ mix.js('resources/js/products/index.js', 'public/js/products');
 mix.js('resources/js/products/edit.js', 'public/js/products');
 mix.js('resources/js/products/create.js', 'public/js/products');
 mix.js('resources/js/productsClient/index.js', 'public/js/productsClient');
-mix.sass('resources/sass/products/index.scss', 'public/css/products')
-    //.sourceMaps(); //adding debugging information
+mix.js('resources/js/spinner.js', 'public/js');
+mix.sass('resources/sass/products/index.scss', 'public/css/products');
+mix.sass('resources/sass/spinner.scss', 'public/css');
+//.sourceMaps(); //adding debugging information

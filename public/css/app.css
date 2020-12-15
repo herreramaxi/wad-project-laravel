@@ -15511,26 +15511,3 @@ a.text-dark:focus {
   }
 }
 
-/* SECTION */
-.section {
-  position: relative;
-  padding: 65px 0; }
-  @media (max-width: 767px) {
-    .section {
-      padding: 2rem 0; } }
-
-.section--pt-0 {
-  padding-top: 0; }
-
-.section--styleguide {
-  padding: 25px 0; }
-
-img {
-  border-style: none;
-  height: auto;
-  max-width: 100%; }
-
-#container {
-  padding: 0 15px;
-  width: 100%; }
-
