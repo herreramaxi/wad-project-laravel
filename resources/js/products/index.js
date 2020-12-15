@@ -78,12 +78,10 @@ function search() {
         },
         success: function(response) {
             $("#response").html(response);
+            spinner.hide();
         },
         error: function(xhr) {
             //Do Something to handle error
-        },
-        complete: function() {
-            spinner.hide();
         }
     });
 }
