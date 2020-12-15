@@ -1,4 +1,4 @@
-const spinner = require("./../spinner");
+import { show, hide } from "./../spinner";
 
 $(document).on("click", ".editModalButton", function(event) {
     event.preventDefault();
@@ -6,7 +6,7 @@ $(document).on("click", ".editModalButton", function(event) {
     $.ajax({
         url: href,
         beforeSend: function() {
-            spinner.show();
+            show();
         },
         // return the result
         success: function(result) {
@@ -17,7 +17,7 @@ $(document).on("click", ".editModalButton", function(event) {
             $("#editModal").modal("show");
         },
         complete: function() {
-            spinner.hide();
+            hide();
         },
         error: function(xhr, status, error) {
             if (status == 404) {
@@ -38,7 +38,7 @@ $(document).on("click", ".createModalButton", function(event) {
     $.ajax({
         url: href,
         beforeSend: function() {
-            spinner.show();
+            show();
         },
         // return the result
         success: function(result) {
@@ -49,7 +49,7 @@ $(document).on("click", ".createModalButton", function(event) {
             $("#createModal").modal("show");
         },
         complete: function() {
-            spinner.hide();
+            hide();
         },
         error: function(xhr, status, error) {
             if (status == 404) {
@@ -74,13 +74,13 @@ function search() {
             name: searchText
         },
         beforeSend: function() {
-            spinner.show();
+            show();
         },
         success: function(response) {
             $("#response").html(response);
         },
         complete: function(jqXHR, textStatus) {
-            spinner.hide();
+            hide();
         },
         error: function(xhr, status, error) {
             //Do Something to handle error
