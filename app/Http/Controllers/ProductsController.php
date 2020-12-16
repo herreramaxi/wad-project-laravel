@@ -56,7 +56,7 @@ class ProductsController extends Controller
     {
         $product = new Product();
 
-        $product->id = Product::max('id') + 1; //Temporary: id is not being auto incremented
+        $product->id = Product::max('id') + 1; //id is not being auto incremented by Eloquent + Postgres
         $product->name = request('name');
         $product->description = request('description');
         $product->price = request('price');

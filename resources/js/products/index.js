@@ -21,6 +21,7 @@ $(document).on("click", ".editModalButton", function(event) {
             } else {
                 alert("Error when trying to load the product");
             }
+            hide();
         }
     });
 });
@@ -46,6 +47,7 @@ $(document).on("click", ".createModalButton", function(event) {
             } else {
                 alert("Error when trying to load create view");
             }
+            hide();
         }
     });
 });
@@ -99,6 +101,7 @@ function search() {
         },
         error: function(xhr, status, error) {
             alert("Error when trying to search products");
+            hide();
         }
     });
 }
