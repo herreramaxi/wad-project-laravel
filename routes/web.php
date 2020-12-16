@@ -34,6 +34,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::post('/contact', function () {
+    return view('contact');
+});
+
 //Examples
 // Route::get('products',[ProductsController::class, 'getIndex']);
 // Route::controller('test','TestController');

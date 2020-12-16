@@ -508,6 +508,17 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 
 /***/ }),
 
+/***/ "./resources/sass/contact.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/contact.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9jb250YWN0LnNjc3M/ZTU4MiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiIuL3Jlc291cmNlcy9zYXNzL2NvbnRhY3Quc2Nzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIHJlbW92ZWQgYnkgZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/sass/contact.scss\n");
+
+/***/ }),
+
 /***/ "./resources/sass/products/index.scss":
 /*!********************************************!*\
   !*** ./resources/sass/products/index.scss ***!
@@ -516,6 +527,17 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /***/ (function(module, exports) {
 
 eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9wcm9kdWN0cy9pbmRleC5zY3NzPzE5ZTAiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9wcm9kdWN0cy9pbmRleC5zY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/products/index.scss\n");
+
+/***/ }),
+
+/***/ "./resources/sass/productsClient/index.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/productsClient/index.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Fzcy9wcm9kdWN0c0NsaWVudC9pbmRleC5zY3NzPzMwODkiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9wcm9kdWN0c0NsaWVudC9pbmRleC5zY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/productsClient/index.scss\n");
 
 /***/ }),
 
@@ -531,16 +553,18 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/products/index.scss ./resources/sass/spinner.scss ***!
-  \********************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/products/index.scss ./resources/sass/spinner.scss ./resources/sass/contact.scss ./resources/sass/productsClient/index.scss ***!
+  \*********************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\dev\heroku_laravel\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\dev\heroku_laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\dev\heroku_laravel\resources\sass\products\index.scss */"./resources/sass/products/index.scss");
-module.exports = __webpack_require__(/*! C:\dev\heroku_laravel\resources\sass\spinner.scss */"./resources/sass/spinner.scss");
+__webpack_require__(/*! C:\dev\heroku_laravel\resources\sass\spinner.scss */"./resources/sass/spinner.scss");
+__webpack_require__(/*! C:\dev\heroku_laravel\resources\sass\contact.scss */"./resources/sass/contact.scss");
+module.exports = __webpack_require__(/*! C:\dev\heroku_laravel\resources\sass\productsClient\index.scss */"./resources/sass/productsClient/index.scss");
 
 
 /***/ })

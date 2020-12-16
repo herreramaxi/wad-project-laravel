@@ -1,6 +1,7 @@
 @extends('shared.layout')
 @section('content')
 <script src="{{ asset('js/productsClient/index.js') }}" defer></script>
+<link href="{{ asset('css/productsClient/index.css') }}" rel="stylesheet">
 <!-- WELCOME
   ================================================== -->
 <div class="container">

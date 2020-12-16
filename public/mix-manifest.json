@@ -4,6 +4,8 @@
     "/css/app.css": "/css/app.css",
     "/css/products/index.css": "/css/products/index.css",
     "/css/spinner.css": "/css/spinner.css",
+    "/css/contact.css": "/css/contact.css",
+    "/css/productsClient/index.css": "/css/productsClient/index.css",
     "/js/products/edit.js": "/js/products/edit.js",
     "/js/products/index.js": "/js/products/index.js",
     "/js/productsClient/index.js": "/js/productsClient/index.js",
