@@ -18,6 +18,7 @@ function readURL(input) {
 }
 
 $(document).on("change", "#inputFileId", function(event) {
+    event.stopPropagation();
     readURL(this);
 });
 
