@@ -25,25 +25,20 @@ Route::get('/home', function () {
     return view('home');
 });
 
-
-Route::get('/testview', function () {
-    return view('testView');
-});
-
-Route::get('/test2', function () {
-    return view('test2');
-});
-
-Route::get('test', [TestController::class, 'getIndex']);
-Route::get('test3', [Test3Controller::class, 'getIndex']);
-
 Route::get('products/search/{name?}', [ProductsController::class, 'search']);
 Route::resource('products', ProductsController::class);
 
 Route::get('productsClient', [ProductsClientController::class, 'getIndex']);
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+//Examples
 // Route::get('products',[ProductsController::class, 'getIndex']);
 // Route::controller('test','TestController');
 // Route::get('/test3','Test3@getIndex');
+// Route::get('test', [TestController::class, 'getIndex']);
+// Route::get('test3', [Test3Controller::class, 'getIndex']);
 
 //Don't forget to add the "use on the top when adding a controller"

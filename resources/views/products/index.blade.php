@@ -19,6 +19,8 @@
 </div>
 <br />
 
+@include('shared.alertMessages')
+
 <div id="response"></div>
 
 <!-- edit modal -->

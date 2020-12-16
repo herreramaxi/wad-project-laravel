@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="/">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -16,10 +16,15 @@
 
             @foreach ($json['items'] as $item)
 
-            @if( $item['name']!= null && $item['href'] !=null )
+            @if( $item['name']!= null &&
+            $item['href'] !=null &&
+            $item['visible'] !=null &&
+            $item['visible'] == 'true' )
+            
             <li class="nav-item {{ (request()->is($item['href'])) ? 'active' : '' }}">
                 <a class="nav-link" href="/{{$item['href']}}">{{$item['name']}}</a>
             </li>
+
             @endif
 
             @endforeach

@@ -81,30 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/products/create.js":
-/*!*****************************************!*\
-  !*** ./resources/js/products/create.js ***!
-  \*****************************************/
+/***/ "./resources/js/alertMessages.js":
+/*!***************************************!*\
+  !*** ./resources/js/alertMessages.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: ENOENT: no such file or directory, open 'C:\\\\dev\\\\heroku_laravel\\\\resources\\\\js\\\\products\\\\create.js'\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3Jlc291cmNlcy9qcy9wcm9kdWN0cy9jcmVhdGUuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/products/create.js\n");
+eval("module.exports = {\n  showSuccessMessage: function showSuccessMessage(message) {\n    $(\"#successMessageDiv\").text(message);\n    $(\"#successMessageAlert\").removeAttr(\"hidden\");\n  },\n  showErrorMessage: function showErrorMessage(message) {\n    $(\"#errorMessageDiv\").text(message);\n    $(\"#errorMessageAlert\").removeAttr(\"hidden\");\n  }\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYWxlcnRNZXNzYWdlcy5qcz8xNmQ5Il0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJzaG93U3VjY2Vzc01lc3NhZ2UiLCJtZXNzYWdlIiwiJCIsInRleHQiLCJyZW1vdmVBdHRyIiwic2hvd0Vycm9yTWVzc2FnZSJdLCJtYXBwaW5ncyI6IkFBQUFBLE1BQU0sQ0FBQ0MsT0FBUCxHQUFpQjtBQUNiQyxvQkFBa0IsRUFBRSw0QkFBU0MsT0FBVCxFQUFrQjtBQUNsQ0MsS0FBQyxDQUFDLG9CQUFELENBQUQsQ0FBd0JDLElBQXhCLENBQTZCRixPQUE3QjtBQUNBQyxLQUFDLENBQUMsc0JBQUQsQ0FBRCxDQUEwQkUsVUFBMUIsQ0FBcUMsUUFBckM7QUFDSCxHQUpZO0FBTWJDLGtCQUFnQixFQUFFLDBCQUFTSixPQUFULEVBQWtCO0FBQ2hDQyxLQUFDLENBQUMsa0JBQUQsQ0FBRCxDQUFzQkMsSUFBdEIsQ0FBMkJGLE9BQTNCO0FBQ0FDLEtBQUMsQ0FBQyxvQkFBRCxDQUFELENBQXdCRSxVQUF4QixDQUFtQyxRQUFuQztBQUNIO0FBVFksQ0FBakIiLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYWxlcnRNZXNzYWdlcy5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xyXG4gICAgc2hvd1N1Y2Nlc3NNZXNzYWdlOiBmdW5jdGlvbihtZXNzYWdlKSB7XHJcbiAgICAgICAgJChcIiNzdWNjZXNzTWVzc2FnZURpdlwiKS50ZXh0KG1lc3NhZ2UpO1xyXG4gICAgICAgICQoXCIjc3VjY2Vzc01lc3NhZ2VBbGVydFwiKS5yZW1vdmVBdHRyKFwiaGlkZGVuXCIpO1xyXG4gICAgfSxcclxuXHJcbiAgICBzaG93RXJyb3JNZXNzYWdlOiBmdW5jdGlvbihtZXNzYWdlKSB7XHJcbiAgICAgICAgJChcIiNlcnJvck1lc3NhZ2VEaXZcIikudGV4dChtZXNzYWdlKTtcclxuICAgICAgICAkKFwiI2Vycm9yTWVzc2FnZUFsZXJ0XCIpLnJlbW92ZUF0dHIoXCJoaWRkZW5cIik7XHJcbiAgICB9IFxyXG59O1xyXG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/alertMessages.js\n");
 
 /***/ }),
 
-/***/ 3:
-/*!***********************************************!*\
-  !*** multi ./resources/js/products/create.js ***!
-  \***********************************************/
+/***/ 5:
+/*!*********************************************!*\
+  !*** multi ./resources/js/alertMessages.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\dev\heroku_laravel\resources\js\products\create.js */"./resources/js/products/create.js");
+module.exports = __webpack_require__(/*! C:\dev\heroku_laravel\resources\js\alertMessages.js */"./resources/js/alertMessages.js");
 
 
 /***/ })

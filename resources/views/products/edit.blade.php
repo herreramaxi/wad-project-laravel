@@ -11,7 +11,8 @@
                 <div class="form-group row">
                     <label for="nameId" class="col-sm-3 col-form-label">Name</label>
                     <div class="col-sm-9">
-                        <input name="name" type="text" value="{{ $product->name }}" class="form-control" id="nameId" placeholder="Name" required>
+                        <input name="name" type="text" value="{{ $product->name }}" class="form-control" id="nameId"
+                            placeholder="Name" required>
                         <div class="invalid-feedback">
                             Please provide a product name.
                         </div>
@@ -19,16 +20,16 @@
                 </div>
             </div>
             <div class="col-md-5">
-    
+
                 <div class="form-group row">
                     <div class="custom-file">
                         <input id="inputFileId" type="file" class="form-control" name="image">
                     </div>
                 </div>
-    
+
             </div>
         </div>
-    
+
         <div class="row">
             <div class="col-md-7">
                 <div class="form-group row">
@@ -37,8 +38,8 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">€</span>
                         </div>
-                        <input name="price" type="number" min="0" step="0.5"  value="{{ $product->price }}" class="form-control" id="priceId"
-                            placeholder="Price" required>
+                        <input name="price" type="number" min="0" step="0.01" value="{{ $product->price }}"
+                            class="form-control" id="priceId" placeholder="Price" required>
                         <div class="invalid-feedback">
                             Please provide a product price.
                         </div>
@@ -56,8 +57,8 @@
                 </div>
             </div>
             <div class="col-md-5">
-                    <img id="previewImage" src="{{getImageSrc($product)}}" class="img-fluid" />      
+                <img id="previewImage" src="{{getImageSrc($product)}}" class="img-fluid" />
             </div>
         </div>
-        </div>
+    </div>
 </form>

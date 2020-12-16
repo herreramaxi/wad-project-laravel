@@ -23,7 +23,6 @@
 
     <!-- Content page -->
     <div class="container">
-
         @yield('content')
     </div>
 
@@ -31,6 +30,7 @@
     <footer class="section section_footer">
         {{-- @include('shared.footer') --}}
     </footer>
+    
 </body>
 
 </html>

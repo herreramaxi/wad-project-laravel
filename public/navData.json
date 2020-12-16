@@ -1,15 +1,18 @@
 {
     "items": [{
             "name": "Menus",
-            "href": "productsClient"
+            "href": "productsClient",
+            "visible": "true"
         },
         {
             "name": "Admin",
-            "href": "products"
+            "href": "products",
+            "visible": "true"
         },
         {
-            "name": "Test",
-            "href": "home"
+            "name": "Contact",
+            "href": "contact",
+            "visible": "true"
         }
     ]
 }

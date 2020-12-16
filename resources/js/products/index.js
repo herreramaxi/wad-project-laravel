@@ -1,4 +1,5 @@
 import { show, hide } from "./../spinner";
+import { showSuccessMessage, showErrorMessage } from "./../alertMessages";
 
 $(document).on("click", ".editModalButton", function(event) {
     event.preventDefault();
@@ -10,17 +11,19 @@ $(document).on("click", ".editModalButton", function(event) {
         },
         success: function(result) {
             $("#editModalBody").html(result);
-      
-            hide();
             $("#editModal").modal("show");
         },
         error: function(xhr, status, error) {
+            console.log(status);
+            console.log(error);
+
             if (status == 404) {
-                console.log(error);
-                alert("Product not found");
+                showErrorMessage("Product not found");
             } else {
-                alert("Error when trying to load the product");
+                showErrorMessage("Error when trying to load edit view   ");
             }
+        },
+        complete: function(jqXHR, textStatus) {
             hide();
         }
     });
@@ -35,18 +38,20 @@ $(document).on("click", ".createModalButton", function(event) {
             show();
         },
         success: function(result) {
-            $("#createModalBody").html(result);           
-
-            hide();
+            $("#createModalBody").html(result);
             $("#createModal").modal("show");
         },
         error: function(xhr, status, error) {
+            console.log(status);
+            console.log(error);
+
             if (status == 404) {
-                console.log(error);
-                alert("View not found");
+                showErrorMessage("View not found");
             } else {
-                alert("Error when trying to load create view");
+                showErrorMessage("Error when trying to load create view");
             }
+        },
+        complete: function(jqXHR, textStatus) {
             hide();
         }
     });
@@ -70,16 +75,22 @@ $("#deleteModalForm").on("submit", function(e) {
         cache: false,
         contentType: false,
         processData: false,
-        headers: {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
-        method: "DELETE",      
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf_token"]').attr("content")
+        },
+        method: "DELETE",
         success: function(data) {
-            //TODO: Add loading in button
             $("#response").html(data);
-            $("#deleteModal").modal("hide");
+            showSuccessMessage("Product deleted");
         },
         error: function(jqXHR, textStatus, errorThrown) {
-            alert("Error when trying to delete a product");
-        }       
+            console.log(textStatus);
+            console.log(errorThrown);
+            showErrorMessage("Error when trying to delete a product");
+        },
+        complete: function(jqXHR, textStatus) {
+            $("#deleteModal").modal("hide");
+        }
     });
 });
 
@@ -97,10 +108,13 @@ function search() {
         },
         success: function(response) {
             $("#response").html(response);
-            hide();
         },
         error: function(xhr, status, error) {
-            alert("Error when trying to search products");
+            console.log(status);
+            console.log(error);
+            showErrorMessage("Error when trying to retrieve products");
+        },
+        complete: function(jqXHR, textStatus) {
             hide();
         }
     });

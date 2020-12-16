@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -93,11 +93,11 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = {\n  show: function show() {\n    $(\"#modalSpinner\").modal(\"show\");\n  },\n  hide: function hide() {\n    setTimeout(function () {\n      $(\"#modalSpinner\").modal(\"hide\");\n    }, 500); // $(\"#modalSpinner\").css('display', 'none');\n    // $(\"#modalSpinner\").modal(\"hide\");\n    // $('#modalSpinner').on('shown.bs.modal', function(e) {\n    //     console.log(\"shown.bs.modal\");\n    //     $(\"#modalSpinner\").modal(\"hide\");\n    // });\n  }\n}; // $('#progessDialog').on('shown.bs.modal', function(e) {\n//     $(\"#progessDialog\").modal(\"hide\");\n// });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvc3Bpbm5lci5qcz8zNTQwIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJzaG93IiwiJCIsIm1vZGFsIiwiaGlkZSIsInNldFRpbWVvdXQiXSwibWFwcGluZ3MiOiJBQUFBQSxNQUFNLENBQUNDLE9BQVAsR0FBaUI7QUFDYkMsTUFBSSxFQUFFLGdCQUFXO0FBQ2JDLEtBQUMsQ0FBQyxlQUFELENBQUQsQ0FBbUJDLEtBQW5CLENBQXlCLE1BQXpCO0FBQ0gsR0FIWTtBQUliQyxNQUFJLEVBQUUsZ0JBQVc7QUFDYkMsY0FBVSxDQUFDLFlBQVc7QUFDbEJILE9BQUMsQ0FBQyxlQUFELENBQUQsQ0FBbUJDLEtBQW5CLENBQXlCLE1BQXpCO0FBQ0gsS0FGUyxFQUVQLEdBRk8sQ0FBVixDQURhLENBSWI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0g7QUFkWSxDQUFqQixDLENBaUJBO0FBQ0E7QUFDQSIsImZpbGUiOiIuL3Jlc291cmNlcy9qcy9zcGlubmVyLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSB7XHJcbiAgICBzaG93OiBmdW5jdGlvbigpIHtcclxuICAgICAgICAkKFwiI21vZGFsU3Bpbm5lclwiKS5tb2RhbChcInNob3dcIik7XHJcbiAgICB9LFxyXG4gICAgaGlkZTogZnVuY3Rpb24oKSB7XHJcbiAgICAgICAgc2V0VGltZW91dChmdW5jdGlvbigpIHtcclxuICAgICAgICAgICAgJChcIiNtb2RhbFNwaW5uZXJcIikubW9kYWwoXCJoaWRlXCIpO1xyXG4gICAgICAgIH0sIDUwMCk7XHJcbiAgICAgICAgLy8gJChcIiNtb2RhbFNwaW5uZXJcIikuY3NzKCdkaXNwbGF5JywgJ25vbmUnKTtcclxuICAgICAgICAvLyAkKFwiI21vZGFsU3Bpbm5lclwiKS5tb2RhbChcImhpZGVcIik7XHJcbiAgICAgICAgLy8gJCgnI21vZGFsU3Bpbm5lcicpLm9uKCdzaG93bi5icy5tb2RhbCcsIGZ1bmN0aW9uKGUpIHtcclxuICAgICAgICAvLyAgICAgY29uc29sZS5sb2coXCJzaG93bi5icy5tb2RhbFwiKTtcclxuICAgICAgICAvLyAgICAgJChcIiNtb2RhbFNwaW5uZXJcIikubW9kYWwoXCJoaWRlXCIpO1xyXG4gICAgICAgIC8vIH0pO1xyXG4gICAgfVxyXG59O1xyXG5cclxuLy8gJCgnI3Byb2dlc3NEaWFsb2cnKS5vbignc2hvd24uYnMubW9kYWwnLCBmdW5jdGlvbihlKSB7XHJcbi8vICAgICAkKFwiI3Byb2dlc3NEaWFsb2dcIikubW9kYWwoXCJoaWRlXCIpO1xyXG4vLyB9KTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/js/spinner.js\n");
+eval("module.exports = {\n  show: function show() {\n    $(\"#modalSpinner\").modal(\"show\");\n  },\n  hide: function hide() {\n    setTimeout(function () {\n      $(\"#modalSpinner\").modal(\"hide\");\n    }, 500);\n  }\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvc3Bpbm5lci5qcz8zNTQwIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJzaG93IiwiJCIsIm1vZGFsIiwiaGlkZSIsInNldFRpbWVvdXQiXSwibWFwcGluZ3MiOiJBQUFBQSxNQUFNLENBQUNDLE9BQVAsR0FBaUI7QUFDYkMsTUFBSSxFQUFFLGdCQUFXO0FBQ2JDLEtBQUMsQ0FBQyxlQUFELENBQUQsQ0FBbUJDLEtBQW5CLENBQXlCLE1BQXpCO0FBQ0gsR0FIWTtBQUliQyxNQUFJLEVBQUUsZ0JBQVc7QUFDYkMsY0FBVSxDQUFDLFlBQVc7QUFDbEJILE9BQUMsQ0FBQyxlQUFELENBQUQsQ0FBbUJDLEtBQW5CLENBQXlCLE1BQXpCO0FBQ0gsS0FGUyxFQUVQLEdBRk8sQ0FBVjtBQUdIO0FBUlksQ0FBakIiLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvc3Bpbm5lci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xyXG4gICAgc2hvdzogZnVuY3Rpb24oKSB7XHJcbiAgICAgICAgJChcIiNtb2RhbFNwaW5uZXJcIikubW9kYWwoXCJzaG93XCIpO1xyXG4gICAgfSxcclxuICAgIGhpZGU6IGZ1bmN0aW9uKCkge1xyXG4gICAgICAgIHNldFRpbWVvdXQoZnVuY3Rpb24oKSB7XHJcbiAgICAgICAgICAgICQoXCIjbW9kYWxTcGlubmVyXCIpLm1vZGFsKFwiaGlkZVwiKTtcclxuICAgICAgICB9LCA1MDApO1xyXG4gICAgfVxyXG59OyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/spinner.js\n");
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!***************************************!*\
   !*** multi ./resources/js/spinner.js ***!
   \***************************************/

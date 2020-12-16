@@ -1,15 +1,19 @@
 require("bootstrap-maxlength/dist/bootstrap-maxlength");
-const spinner = require("./../spinner");
+import { showSuccessMessage, showErrorMessage } from "./../alertMessages";
 
 function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+    try {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-        reader.onload = function(e) {
-            $("#previewImage").attr("src", e.target.result);
-        };
+            reader.onload = function(e) {
+                $("#previewImage").attr("src", e.target.result);
+            };
 
-        reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        }
+    } catch (ex) {
+        showErrorMessage("Error when trying to preview selected image");
     }
 }
 
@@ -17,7 +21,7 @@ $(document).on("change", "#inputFileId", function(event) {
     readURL(this);
 });
 
-function ProcessSubmit(e, form, modalId) {
+function ProcessSubmit(e, form, modalId, successMessage, errorMessage) {
     if (form.checkValidity() === false) {
         e.preventDefault();
         e.stopPropagation();
@@ -33,18 +37,18 @@ function ProcessSubmit(e, form, modalId) {
             contentType: false,
             processData: false,
             method: "POST",
-            beforeSend: function() {
-                // spinner.show();
-            },
             success: function(data) {
-                //TODO: Add loading in button
                 $("#response").html(data);
-                $(modalId).modal("hide");
+                showSuccessMessage(successMessage);
             },
-            error: function(jqXHR, textStatus, errorThrown) {}
-            // complete: function(jqXHR, textStatus) {
-            //     spinner.hide();
-            // }
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus);
+                console.log(errorThrown);
+                showErrorMessage(errorMessage);
+            },
+            complete: function(jqXHR, textStatus) {
+                $(modalId).modal("hide");
+            }
         });
     }
 
@@ -52,13 +56,26 @@ function ProcessSubmit(e, form, modalId) {
 }
 
 $("#editModalForm").on("submit", function(e) {
-    ProcessSubmit(e, this, "#editModal");
+    ProcessSubmit(
+        e,
+        this,
+        "#editModal",
+        "Product updated successfully",
+        "Error when trying to update a product"
+    );
 });
 
 $("#createModalForm").on("submit", function(e) {
-    ProcessSubmit(e, this, "#createModal");
+    ProcessSubmit(
+        e,
+        this,
+        "#createModal",
+        "Product created successfully",
+        "Error when trying to create a product"
+    );
 });
 
+//bootstrap-maxlength
 $("input[maxlength], textarea").maxlength({
     alwaysShow: true, //if true the threshold will be ignored and the remaining length indication will be always showing up while typing or on focus on the input. Default: false.
     // threshold: 10, //Ignored if alwaysShow is true. This is a number indicating how many chars are left to start displaying the indications. Default: 10
