@@ -24,7 +24,7 @@ class ProductsController extends Controller
         
         if ($request->has('name')) {
             $products = Product::orderBy('name')
-                ->where('name', 'like', '%' . request('name') . '%')
+                ->where('name', 'ilike', '%' . request('name') . '%')
                 ->get();
         }
 
@@ -74,7 +74,7 @@ class ProductsController extends Controller
         }
 
         $product->save();
-        // return back()->withInput();
+        
         $products = Product::orderBy('name')->get();
         return view('products.partialProductList', compact('products'));   
     }
@@ -146,8 +146,5 @@ class ProductsController extends Controller
         $product->delete();
         $products = Product::orderBy('name')->get();
         return view('products.partialProductList', compact('products'));      
-        // return redirect()
-        //     ->route('products.index')
-        //     ->with('success', 'Product deleted successfully');
     }
 }
