@@ -28,7 +28,9 @@ Route::get('/home', function () {
 Route::get('products/search/{name?}', [ProductsController::class, 'search']);
 Route::resource('products', ProductsController::class);
 
-Route::get('productsClient', [ProductsClientController::class, 'getIndex']);
+Route::resource('productsClient', ProductsClientController::class);
+Route::get('autocomplete', [ProductsClientController::class, 'search']);
+
 
 Route::get('/contact', function () {
     return view('contact');
