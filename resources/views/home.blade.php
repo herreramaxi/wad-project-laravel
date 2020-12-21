@@ -1,5 +1,5 @@
 @extends('shared.layout')
-@section('content')
-<h1>Home page</h1>
 
-@stop
+@section('content')
+<h1>Home</h1>
+@endsection

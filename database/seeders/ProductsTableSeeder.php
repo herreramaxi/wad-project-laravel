@@ -83,6 +83,7 @@ class ProductsTableSeeder extends Seeder
 
         return $json;
     }
+
     /**
      * Run the database seeds.
      *
@@ -97,8 +98,7 @@ class ProductsTableSeeder extends Seeder
             $this->command->warn('No products found');
             return;
         }
-
-        DB::table('products')->delete();
+    
         $id = 1;
         foreach ($json['products'] as $product) {
 

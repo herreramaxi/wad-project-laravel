@@ -2,17 +2,20 @@
     "items": [{
             "name": "Menus",
             "href": "productsClient",
-            "visible": "true"
+            "visible": "true",
+            "authenticated": "false"
         },
         {
             "name": "Admin",
             "href": "products",
-            "visible": "true"
+            "visible": "true",
+            "authenticated": "true"
         },
         {
             "name": "Contact",
             "href": "contact",
-            "visible": "true"
+            "visible": "true",
+            "authenticated": "false"
         }
     ]
 }

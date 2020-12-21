@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\TestController;
 use App\Http\Controllers\ProductsController;
-use App\Http\Controllers\Test3Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsClientController;
 
@@ -26,7 +24,7 @@ Route::get('/home', function () {
 });
 
 Route::get('products/search/{name?}', [ProductsController::class, 'search']);
-Route::resource('products', ProductsController::class);
+Route::resource('products', ProductsController::class)->middleware('auth');
 
 Route::resource('productsClient', ProductsClientController::class);
 Route::get('autocomplete', [ProductsClientController::class, 'search']);
@@ -39,6 +37,12 @@ Route::get('/contact', function () {
 Route::post('/contact', function () {
     return view('contact');
 });
+
+if (App::environment('production')) {
+    Auth::routes(['register' => false, 'reset' => false, 'confirm' => false]);
+} else {
+    Auth::routes();
+}
 
 //Examples
 // Route::get('products',[ProductsController::class, 'getIndex']);
