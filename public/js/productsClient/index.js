@@ -104,7 +104,7 @@ eval("$(function () {\n  $(document).autocomplete();\n});\n\nfunction setPartial
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Sika\Documents\GitHub\wad-project-laravel\resources\js\productsClient\index.js */"./resources/js/productsClient/index.js");
+module.exports = __webpack_require__(/*! C:\dev\heroku_laravel\resources\js\productsClient\index.js */"./resources/js/productsClient/index.js");
 
 
 /***/ })
