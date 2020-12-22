@@ -26,4 +26,5 @@ mix.sass('resources/sass/products/index.scss', 'public/css/products');
 mix.sass('resources/sass/spinner.scss', 'public/css');
 mix.sass('resources/sass/contact.scss', 'public/css');
 mix.sass('resources/sass/productsClient/index.scss', 'public/css/productsClient');
+mix.sass('resources/sass/productsClient/menusCarousel.scss', 'public/css/productsClient');
 //.sourceMaps(); //adding debugging information

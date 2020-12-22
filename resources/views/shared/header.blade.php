@@ -8,7 +8,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             @php
-            $path = "navData.json";
+            
+            $path = "json/navData.json";
             $json = json_decode(file_get_contents($path), true);
             @endphp
 

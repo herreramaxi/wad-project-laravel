@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->decimal('price');
             $table->binary('image')->nullable();
             $table->timestamps();
+            $table->index('name');
         });
 
         // DB::update("ALTER TABLE products AUTO_INCREMENT = 100;");

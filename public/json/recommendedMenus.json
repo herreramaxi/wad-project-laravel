@@ -1,0 +1,60 @@
+{
+    "menus": [
+        {
+            "name" : "Oyster 1",
+            "description" : "Shellfish is a colloquial and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms. Although most kinds of shellfish are harvested from saltwater environments, some are found in freshwater.",
+            "price": "26",
+            "src": "/images/oysters.png"
+        },
+        {
+            "name" : "Oyster 2",
+            "description" : "Shellfish is a colloquial and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms. Although most kinds of shellfish are harvested from saltwater environments, some are found in freshwater.",
+            "price": "26",
+            "src": "/images/oysterrestauranthowth.jpg"
+        },
+            {
+            "name" : "Irish stew",
+            "description" : "Irish stew",
+            "price": "12",
+            "src": "/images/irish-stew.webp"
+        },
+        {
+            "name" : "Burger",
+            "description" : "Burger",
+            "price": "12",
+            "src": "/images/Burger1.jpg"
+           
+        },
+        {
+            "name" : "Burger",
+            "description" : "Burger",
+            "price": "12",
+            "src": "/images/Burger1.jpg"
+        },
+       
+        {
+            "name" : "Oyster 2",
+            "description" : "Shellfish is a colloquial and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms. Although most kinds of shellfish are harvested from saltwater environments, some are found in freshwater.",
+            "price": "26",
+            "src": "/images/oysterrestauranthowth.jpg"
+        
+        },
+        {
+            "name" : "Oyster 1",
+            "description" : "Shellfish is a colloquial and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms. Although most kinds of shellfish are harvested from saltwater environments, some are found in freshwater.",
+            "price": "26",
+            "src": "/images/oysters.png"
+       
+        },
+            {
+            "name" : "Irish stew",
+            "description" : "Irish stew",
+            "price": "12",
+            "src": "/images/irish-stew.webp"
+        }       
+    ]
+}
+
+
+
+
