@@ -34,7 +34,7 @@
             </div>
         </div> <!-- / .row -->
     </section>
-    <hr>
+   <br>
     @include('productsClient.menusCarousel')
     <!-- MENU
                 ================================================== -->

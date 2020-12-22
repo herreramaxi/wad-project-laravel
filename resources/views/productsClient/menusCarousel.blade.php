@@ -30,7 +30,7 @@ $state = "A";
         @if($state == "A")
 
         <div class="carousel-item {{ $i == 1 ? "active": ""}}">
-            <div class="row no-gutters">
+            <div class="row no-gutters ">
 
                 @php
                 $state = "B";
@@ -38,43 +38,55 @@ $state = "A";
 
                 @endif
 
-                <div class="col-md-2 my-slide ">
+                <div class="col-md-2 my-slide">
+                    <div class="card" style="swidth: 18rem;">
+
+                        <img src="{{ $item['src'] }}"  class="card-img-top menu-image" />
+
+                        <div class="card-body">
+                            <h6 class="card-title text-truncate">{{$item['name']}}</h6>
+                            {{-- <h6 class="card-title">&euro; {{$item['price']}}</h6> --}}
+                            <p class="card-text text-truncate">{{ $item['description']}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="col-md-2 my-slide ">
                     <div class="slider single-item ">
                         <img class="menu-image" src="{{ $item['src'] }}"
-                            alt="{{ $item['name'] }}">
-                    </div>      
-                </div>
-
-                @if($state == "B")
-
-                @if($i%6==0 || $i ==$lastElement )
+                alt="{{ $item['name'] }}">
             </div>
-        </div>
+        </div> --}}
 
-        @php
-        $state = "A";
-        @endphp
+        @if($state == "B")
 
-
-        @endif
-
-        @endif
-
-
-        @php
-        $i++;
-        @endphp
-
-        @endforeach
-
+        @if($i%6==0 || $i ==$lastElement )
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+</div>
+
+@php
+$state = "A";
+@endphp
+
+
+@endif
+
+@endif
+
+
+@php
+$i++;
+@endphp
+
+@endforeach
+
+</div>
+<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+</a>
 </div>
 @endisset
