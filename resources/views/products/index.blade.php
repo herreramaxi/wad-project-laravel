@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-9"></div>
     <div class="col-md-2">
-        <input class="form-control" id="searchInput" name="name" type="search" placeholder="Search...">
+        <input   autocomplete="off" class="form-control" id="searchInput" name="name" type="search" placeholder="Search...">
     </div>
 </div>
 <br />

@@ -3,8 +3,8 @@
 <!-- Import styles for menu -->
 <link href="{{ asset('css/productsClient/index.css') }}" rel="stylesheet">
 <!-- Import typeahead.js and typeahead boostrap-->
-{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
-    defer /> --}}
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    defer /> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js" defer>
 </script>
 <!-- Import index.js -->
@@ -28,7 +28,7 @@
                 </p>
                 <form class="d-flex" filter-attr="{{ url('autocomplete') }}"
                     data-attr="{{route('productsClient.show','show')}}" id="searchForm">
-                    <input id="search" name="search" type="text" class="form-control me-2" aria-label="Search"
+                    <input id="search" autocomplete="off" name="search" type="text" class="form-control me-2" aria-label="Search"
                         placeholder="Search" />
                 </form>
             </div>
