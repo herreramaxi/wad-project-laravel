@@ -3,10 +3,10 @@
 <!-- Import styles for menu -->
 <link href="{{ asset('css/productsClient/index.css') }}" rel="stylesheet">
 <!-- Import typeahead.js and typeahead boostrap-->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
-    defer /> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js" defer>
-</script>
+{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    defer /> --}}
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js" defer>
+</script> --}}
 <!-- Import index.js -->
 <script src="{{ asset('js/productsClient/index.js') }}" defer></script>
 <!-- WELCOME
@@ -26,28 +26,22 @@
                     "Inspired by a love of Argentine food, wine, vivacious lifestyle and rich culture, our menu follows
                     the Argentine tradition of sharing food."
                 </p>
-                <form class="d-flex" filter-attr="{{ url('autocomplete') }}"
-                    data-attr="{{route('productsClient.show','show')}}" id="searchForm">
-                    <input id="search" autocomplete="off" name="search" type="text" class="form-control me-2" aria-label="Search"
-                        placeholder="Search" />
-                </form>
+                {{-- <form class="d-flex" filter-attr="{{ url('autocomplete') }}"
+                    data-attr="{{route('productsClient.show','show')}}" id="searchForm"> --}}
+
+                    <input   autocomplete="off" class="form-control me-2" id="searchInput" name="name" type="search" placeholder="Search...">
+
+                    {{-- <input id="search" autocomplete="off" name="search" type="text" class="form-control me-2"
+                        aria-label="Search" placeholder="Search" /> --}}
+                {{-- </form> --}}
             </div>
         </div> <!-- / .row -->
     </section>
-   <br>
+    <br>
     @include('productsClient.menusCarousel')
-    <!-- MENU
-                ================================================== -->
-    <section class="section section_menu section_border_bottom">
-        <!-- MENU 
-                 ================================================== -->
-        <div class="row section_menu__grid" id="menu_images">
-            @foreach ($products as $product)
-            @include('productsClient.show', ['product' => $product])
-            @endforeach
-        </div> <!-- / .row -->
-</div> <!-- / .container -->
-</section>
-<br>
+
+    <div id="partialProductList"></div>
+
+    <br>
 </div>
 @stop

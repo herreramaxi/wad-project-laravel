@@ -26,8 +26,11 @@ Route::get('/home', function () {
 Route::get('products/search/{name?}', [ProductsController::class, 'search']);
 Route::resource('products', ProductsController::class)->middleware('auth');
 
-Route::resource('productsClient', ProductsClientController::class);
-Route::get('autocomplete', [ProductsClientController::class, 'search']);
+// Route::resource('productsClient', ProductsClientController::class);
+
+Route::get('productsClient', [ProductsClientController::class, 'index']);
+Route::get('productsClient/search/{name?}', [ProductsClientController::class, 'search']);
+// Route::get('autocomplete', [ProductsClientController::class, 'search']);
 
 
 Route::get('/contact', function () {
