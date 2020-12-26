@@ -1,0 +1,21 @@
+{
+    "title": "FDA -",
+    "subtitle": "Food Delivery App",
+    "images": [
+        {
+            "heading": "Who are we?",
+            "description": "A leading online food delivery marketplace.",
+            "imagePath":"images/home/home-carousel-1.png"
+        },
+        {
+            "heading": "What we do",
+            "description": "FDA is an online food delivery marketplace, connecting consumers and restaurants through its platform.",
+            "imagePath":"images/home/home-carousel-2.png"
+        },
+        {
+            "heading": "As an online food delivery platform",
+            "description": "FDA facilitates the online ordering, payment and occasionally, fulfilment of orders. We utilise a hybrid model which builds on our marketplace heritage.",
+            "imagePath":"images/home/home-carousel-3.png"
+        }
+    ]
+}
