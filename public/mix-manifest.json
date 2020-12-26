@@ -8,6 +8,7 @@
     "/css/productsClient/index.css": "/css/productsClient/index.css",
     "/css/productsClient/menusCarousel.css": "/css/productsClient/menusCarousel.css",
     "/css/home.css": "/css/home.css",
+    "/css/typeahead.css": "/css/typeahead.css",
     "/js/products/edit.js": "/js/products/edit.js",
     "/js/products/index.js": "/js/products/index.js",
     "/js/productsClient/index.js": "/js/productsClient/index.js",

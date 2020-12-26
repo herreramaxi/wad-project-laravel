@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('typeahead.js');
 
 // window.Vue = require('vue');
 

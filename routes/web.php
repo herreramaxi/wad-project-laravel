@@ -29,8 +29,9 @@ Route::resource('products', ProductsController::class)->middleware('auth');
 // Route::resource('productsClient', ProductsClientController::class);
 
 Route::get('productsClient', [ProductsClientController::class, 'index']);
+
 Route::get('productsClient/search/{name?}', [ProductsClientController::class, 'search']);
-// Route::get('autocomplete', [ProductsClientController::class, 'search']);
+Route::get('productsClient/searchAutocomplete/{query?}', [ProductsClientController::class, 'searchAutocomplete']);
 
 
 Route::get('/contact', function () {

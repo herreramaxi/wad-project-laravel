@@ -2,8 +2,7 @@
 
     <div class="row section_menu__grid" id="menu_images">
         @foreach ($products as $product)
-        {{-- @include('productsClient.show', ['product' => $product]) --}}
-        <div class="{{count($products) > 1 ? "col-md-6": "col-md-12"}} section_menu__grid__item mains">
+        <div class="col-md-6 section_menu__grid__item mains">
             <div class="section_menu__item">
                 <div class="row">
                     <div class="col-3 align-self-center">
@@ -19,10 +18,10 @@
                     </div>
                     <div class="col-2">
                         <div class="section_menu__item__price text-center item-content">
-                            {{ $product->price }}
+                            &euro; {{ $product->price }}
                         </div>
                     </div>
-                </div> <!-- / .row -->
+                </div>
             </div>
         </div>
 

@@ -28,4 +28,7 @@ mix.sass('resources/sass/contact.scss', 'public/css');
 mix.sass('resources/sass/productsClient/index.scss', 'public/css/productsClient');
 mix.sass('resources/sass/productsClient/menusCarousel.scss', 'public/css/productsClient');
 mix.sass('resources/sass/home/home.scss', 'public/css');
+mix.postCss('resources/css/typeahead.css', 'public/css');
+// mix.js('node_modules/typeahead.js', 'public/js/typeahead');
+
 //.sourceMaps(); //adding debugging information

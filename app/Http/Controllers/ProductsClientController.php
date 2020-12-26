@@ -34,10 +34,36 @@ class ProductsClientController extends Controller
     //     return response()->json($products);
     // }
 
+    public function searchAutocomplete(Request $request)
+    {
+        $products = null;
+
+        if ($request->has('query')) {
+            $products = Product::orderBy('name')
+                ->where('name', 'ilike', '%' . request('query') . '%')
+                ->get();
+        }
+
+        if ($products == null) {
+            $products = Product::orderBy('name')->get();
+        }
+
+        $products2 = $products->map(function ($prod, $key) {
+            $p = new Product();
+            $p->name = $prod->name;
+            $p->image = getImageSrc($prod);
+            // $p->description = $prod->description;
+            return $p;
+        });
+
+        return  response()->json($products2);
+    }
+
+
     public function search(Request $request)
     {
         $products = null;
-        
+
         if ($request->has('name')) {
             $products = Product::orderBy('name')
                 ->where('name', 'ilike', '%' . request('name') . '%')
@@ -50,6 +76,4 @@ class ProductsClientController extends Controller
 
         return view('productsClient.partialProductList', compact('products'));
     }
-
-
 }
