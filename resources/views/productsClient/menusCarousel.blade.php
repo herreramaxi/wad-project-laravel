@@ -13,7 +13,7 @@ $state = "A";
 @isset( $json )
 
 <h3>Featured</h3>
-<div id="carouselExampleControls" class="carousel slide carousel-multi-item" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
     <div class="carousel-inner" role="listbox">
 
@@ -31,8 +31,8 @@ $state = "A";
         <div class="carousel-item {{ $i == 1 ? "active": ""}}">
             <div class="row no-gutters ">
 
-                <div class="col-md-2 my-slide">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-sm-12">
+                    <div class="card">
 
                         <img src="{{ $item['src'] }}" class="card-img-top  menu-image" />
 
@@ -73,7 +73,7 @@ $state = "A";
 
                 @endif
 
-                <div class="col-md-2 my-slide">
+                <div class="col-md-2">
                     <div class="card">
 
                         <img src="{{ $item['src'] }}" class="card-img-top menu-image" />
