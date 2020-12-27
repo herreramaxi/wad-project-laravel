@@ -36,7 +36,7 @@ $(function() {
     search();
 });
 
-var citynames = new Bloodhound({
+var products = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace("name"),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     remote: {
@@ -44,16 +44,14 @@ var citynames = new Bloodhound({
         wildcard: "%QUERY"
     }
 });
-citynames.initialize();
+products.initialize();
 
 $("#searchInput").typeahead(
-    { highlight: true,
-         minLength: 1
-     },
+    { highlight: true, minLength: 1 },
     {
         name: "licenses",
         display: "name",
-        source: citynames.ttAdapter(),
+        source: products.ttAdapter(),
         templates: {
             suggestion: Handlebars.compile(
                 '<div class="tt-suggestion tt-selectable ProfileCard">' +

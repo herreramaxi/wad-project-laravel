@@ -17,12 +17,47 @@ $state = "A";
 
     <div class="carousel-inner" role="listbox">
 
+        @if ($agent->isMobile())
+
         @foreach ($json['menus'] as $item)
 
         {{--If any property is null => @continue--}}
         @if( $item['name']== null ||
         $item['description'] ==null ||
-        $item['price'] ==null ||
+        $item['src'] ==null)
+        @continue
+        @endif
+
+        <div class="carousel-item {{ $i == 1 ? "active": ""}}">
+            <div class="row no-gutters ">
+
+                <div class="col-md-2 my-slide">
+                    <div class="card" style="width: 18rem;">
+
+                        <img src="{{ $item['src'] }}" class="card-img-top  menu-image" />
+
+                        <div class="card-body">
+                            <h6 class="card-title text-truncate">{{$item['name']}}</h6>
+                            <p class="card-text text-truncate">{{ $item['description']}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        @php
+        $i++;
+        @endphp
+        @endforeach
+
+        @else
+
+        @foreach ($json['menus'] as $item)
+
+        {{--If any property is null => @continue--}}
+        @if( $item['name']== null ||
+        $item['description'] ==null ||
         $item['src'] ==null)
         @continue
         @endif
@@ -39,54 +74,48 @@ $state = "A";
                 @endif
 
                 <div class="col-md-2 my-slide">
-                    <div class="card" style="swidth: 18rem;">
+                    <div class="card">
 
-                        <img src="{{ $item['src'] }}"  class="card-img-top menu-image" />
+                        <img src="{{ $item['src'] }}" class="card-img-top menu-image" />
 
                         <div class="card-body">
                             <h6 class="card-title text-truncate">{{$item['name']}}</h6>
-                            {{-- <h6 class="card-title">&euro; {{$item['price']}}</h6> --}}
                             <p class="card-text text-truncate">{{ $item['description']}}</p>
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-md-2 my-slide ">
-                    <div class="slider single-item ">
-                        <img class="menu-image" src="{{ $item['src'] }}"
-                alt="{{ $item['name'] }}">
+
+                @if($state == "B")
+
+                @if($i%6==0 || $i ==$lastElement )
             </div>
-        </div> --}}
+        </div>
 
-        @if($state == "B")
+        @php
+        $state = "A";
+        @endphp
 
-        @if($i%6==0 || $i ==$lastElement )
+
+        @endif
+
+        @endif
+
+
+        @php
+        $i++;
+        @endphp
+
+        @endforeach
+
+        @endif
     </div>
-</div>
-
-@php
-$state = "A";
-@endphp
-
-
-@endif
-
-@endif
-
-
-@php
-$i++;
-@endphp
-
-@endforeach
-
-</div>
-<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-</a>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 @endisset

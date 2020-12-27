@@ -39,6 +39,15 @@
     object-fit: cover;
 }
 
+@media only screen and (max-width: 500px) {
+    .menu-image {
+        border-radius: 4px;
+        width: 100%;     
+        height: 30vw;  
+        object-fit: cover;
+    }
+  }
+
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
