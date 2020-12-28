@@ -1,7 +1,6 @@
 @extends('shared.layout')
 @section('content')
 
-    <script src="{{ asset('js/home.js') }}" defer></script>
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 
     <main role="main" class="inner cover">
