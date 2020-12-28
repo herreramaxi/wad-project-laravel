@@ -22,6 +22,7 @@ mix.js('resources/js/products/edit.js', 'public/js/products');
 mix.js('resources/js/productsClient/index.js', 'public/js/productsClient');
 mix.js('resources/js/spinner.js', 'public/js');
 mix.js('resources/js/alertMessages.js', 'public/js');
+mix.js('resources/js/contact/index.js', 'public/js/contact');
 mix.sass('resources/sass/products/index.scss', 'public/css/products');
 mix.sass('resources/sass/spinner.scss', 'public/css');
 mix.sass('resources/sass/contact.scss', 'public/css');

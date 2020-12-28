@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsClientController;
+use App\Http\Controllers\ContactUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,20 +34,14 @@ Route::get('productsClient', [ProductsClientController::class, 'index']);
 Route::get('productsClient/search/{name?}', [ProductsClientController::class, 'search']);
 Route::get('productsClient/searchAutocomplete/{query?}', [ProductsClientController::class, 'searchAutocomplete']);
 
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::post('/contact', function () {
-    return view('contact');
-});
-
 if (App::environment('production')) {
     Auth::routes(['register' => false, 'reset' => false, 'confirm' => false]);
 } else {
     Auth::routes();
 }
+
+Route::get('contactus',[ContactUsController::class, 'index']); 
+Route::post('contactus/mail', [ContactUsController::class, 'mail'])-> name('mail'); 
 
 //Examples
 // Route::get('products',[ProductsController::class, 'getIndex']);

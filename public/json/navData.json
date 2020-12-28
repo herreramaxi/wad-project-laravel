@@ -13,7 +13,7 @@
         },
         {
             "name": "Contact",
-            "href": "contact",
+            "href": "contactus",
             "visible": "true",
             "authenticated": "false"
         }
