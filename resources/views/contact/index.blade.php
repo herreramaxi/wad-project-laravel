@@ -1,6 +1,5 @@
 @extends('shared.layout')
 @section('content')
-<link href="{{ asset('css/contact.css') }}" rel="stylesheet">
 <script src="{{ asset('js/contact/index.js') }}" defer></script>
 
 <br>
@@ -18,7 +17,7 @@
   {{ csrf_field() }}
   <div class="row g-3 justify-content-center">
     <div class="col-sm-7">
-      <input id="inputName" name="name" type="text" class="form-control" placeholder="Your Name" required>
+      <input id="inputName" name="name" type="text" class="form-control" placeholder="Your Name" required><br>
       <div class="invalid-feedback">
         Please provide a name.
       </div>
@@ -27,7 +26,7 @@
 
   <div class="row g-3 justify-content-center">
     <div class="col-sm-7">
-      <input id="inputEmail" name="email" type="email" class="form-control" placeholder="Your Email" required>
+      <input id="inputEmail" name="email" type="email" class="form-control" placeholder="Your Email" required><br>
       <div class="invalid-feedback">
         Please provide an email.
       </div>
@@ -37,13 +36,13 @@
   <fieldset class="row g-3 justify-content-center">
     <div class="col-sm-7">
       <textarea id="textAreaMessage" name="message" class="form-control" placeholder="Message" rows="8" required
-        maxlength="512"></textarea>
+        maxlength="512"></textarea><br>
       <div class="invalid-feedback">
         Please provide a message.
       </div>
     </div>
   </fieldset>
-  <br>
+ 
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     <div class="col-sm-7">
       <button type="submit" class="btn btn-dark">Send Message</button>
