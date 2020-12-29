@@ -23,7 +23,7 @@
             $item['visible'] == 'true' &&
             $item['authenticated'] !=null &&
             $item['authenticated'] == 'false' ||
-
+            env('AUTH_DISABLED', false) ||
             $item['authenticated'] == 'true' && Auth::check())
 
             <li class="nav-item {{ (request()->is($item['href'])) ? 'active' : '' }}">
