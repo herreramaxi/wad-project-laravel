@@ -1,8 +1,8 @@
 @extends('shared.layout')
 @section('content')
 
-<link href="{{ asset('css/productsClient/index.css') }}" rel="stylesheet">
-<link href="{{ asset('css/typeahead.css') }}" rel="stylesheet">
+<link href="{{ asset('css/productsClient/index.css') }}" rel="stylesheet" defer>
+<link href="{{ asset('css/typeahead.css') }}" rel="stylesheet" defer>
 <script src="{{ asset('js/productsClient/index.js') }}" defer></script>
 
 <div class="container" id="productsClientContainer">

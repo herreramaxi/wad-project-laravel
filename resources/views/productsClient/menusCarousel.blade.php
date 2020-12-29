@@ -1,4 +1,4 @@
-<link href="{{ asset('css/productsClient/menusCarousel.css') }}" rel="stylesheet">
+<link href="{{ asset('css/productsClient/menusCarousel.css') }}" rel="stylesheet" defer>
 
 @php
 

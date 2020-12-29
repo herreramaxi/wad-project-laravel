@@ -18,21 +18,9 @@ class ProductsTableSeeder extends Seeder
         $path = base_path().'/database/seeders/';
         $jsonPath = $path. 'json/';
         $imagesPath = $path. 'images/';
-        
-        dump($path );
-        dump( $jsonPath );
-        dump( $imagesPath );
+              
         $json = json_decode( file_get_contents( $jsonPath. 'products.json'),1);
          
-     
-        // $jsonString = $this->getProductsJson();
-        // $json = json_decode($jsonString, true);
-
-        // if ($json == null || $json['products'] == null) {
-        //     $this->command->warn('No products found');
-        //     return;
-        // }
-    
         $id = 1;
         foreach ($json['products'] as $product) {
 
