@@ -4,13 +4,13 @@
             "name": "Mix seafood",
             "description": "Shellfish is a colloquial and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms. Although most kinds of shellfish are harvested from saltwater environments, some are found in freshwater.",
             "price": "26",
-            "src": "/images/oysters.png"
+            "src": "/images/oysters.webp"
         },
         {
             "name": "Fresh oysters",
             "description": "A taster of fresh oysters served the old-fashioned way",
             "price": "26",
-            "src": "/images/oysterrestauranthowth.jpg"
+            "src": "/images/oysterrestauranthowth.webp"
         },
         {
             "name": "Irish stew",
