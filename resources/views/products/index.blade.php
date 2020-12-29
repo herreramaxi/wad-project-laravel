@@ -82,8 +82,7 @@
                 <form id="deleteModalForm" method="post">
                     {{ csrf_field() }}
                     @method('DELETE')
-                    <div class="alert alert-danger" role="alert">
-                        Are you sure you want to delete this product?
+                    <div id="deleteMessage" class="alert alert-danger" role="alert">                       
                     </div>
                 </form>
             </div>

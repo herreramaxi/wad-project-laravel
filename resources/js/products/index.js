@@ -60,8 +60,10 @@ $(document).on("click", ".createModalButton", function(event) {
 $(document).on("click", ".deleteModalButton", function(event) {
     event.preventDefault();
     let href = $(this).attr("data-attr");
+    let menu = $(this).attr("data-menu");
 
     $("#deleteModalForm").attr("action", href);
+    $("#deleteMessage").html('Are you sure you want to delete the menu "' + menu + '" ?');
     $("#deleteModal").modal("show");
 });
 

@@ -20,8 +20,8 @@
                         <button class="btn btn-primary editModalButton" data-toggle="modal"
                             data-attr="{{ route('products.edit', $product->id) }}">Update</button>
                         <button class="btn btn-danger deleteModalButton" data-toggle="modal" data-target="#deleteModal"
-                            data-attr="{{ route('products.destroy', $product->id) }}">Delete</button>
-
+                            data-attr="{{ route('products.destroy', $product->id) }}"
+                            data-menu="{{ $product->name}}">Delete</button>
                     </div>
                 </div>
             </div>

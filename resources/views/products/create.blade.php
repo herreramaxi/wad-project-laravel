@@ -53,7 +53,9 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <img id="previewImage"  src="{{getImageSrc(null)}}" class="img-fluid" />
+                <div class="form-group row">
+                    <img id="previewImage" src="{{getImageSrc(null)}}" class="img-fluid img-thumbnail" style="max-height: 15.5em" />
+                </div>
             </div>
         </div>
     </div>
