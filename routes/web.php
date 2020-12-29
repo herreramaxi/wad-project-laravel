@@ -24,10 +24,13 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('products/search/{name?}', [ProductsController::class, 'search']);
-Route::resource('products', ProductsController::class)->middleware('auth');
-
-// Route::resource('productsClient', ProductsClientController::class);
+if ((bool)env('AUTH_DISABLED', false)) {
+    Route::get('products/search/{name?}', [ProductsController::class, 'search']);
+    Route::resource('products', ProductsController::class);
+} else {       
+    Route::get('products/search/{name?}', [ProductsController::class, 'search'])->middleware('auth');
+    Route::resource('products', ProductsController::class)->middleware('auth');
+}
 
 Route::get('productsClient', [ProductsClientController::class, 'index']);
 
@@ -40,8 +43,8 @@ if (App::environment('production')) {
     Auth::routes();
 }
 
-Route::get('contactus',[ContactUsController::class, 'index']); 
-Route::post('contactus/mail', [ContactUsController::class, 'mail'])-> name('mail'); 
+Route::get('contactus', [ContactUsController::class, 'index']);
+Route::post('contactus/mail', [ContactUsController::class, 'mail'])->name('mail'); 
 
 //Examples
 // Route::get('products',[ProductsController::class, 'getIndex']);
