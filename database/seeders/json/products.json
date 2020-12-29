@@ -1,0 +1,76 @@
+{
+    "products": [
+        {
+            "name": "Argentinian asado chimichurri",
+            "description": "Argentinian asado chimichurri",
+            "price": "45",
+            "image": "argentinian-asado-chimichurri.webp"
+        },
+        {
+            "name": "Chorizo & mozzarella gnocchi bake",
+            "description": "Upgrade cheesy tomato pasta with gnocchi, chorizo and mozzarella for a comforting bake that makes an excellent midweek meal",
+            "price": "22",
+            "image": "chorizo-mozarella-gnocchi-bake-cropped.webp"
+        },
+        {
+            "name": "Classic lasagne",
+            "description": "Kids will love to help assemble this easiest ever pasta bake with streaky bacon, beef mince, a crème fraîche sauce and gooey mozzarella",
+            "price": "22.50",
+            "image": "classic-lasange.webp"
+        },
+        {
+            "name": "Easy beef hotpot",
+            "description": "Stretch a pack of mince to make this hearty dish. It's perfect eaten straight from the bowl with a spoon and some crusty bread on a cold winter's night",
+            "price": "32",
+            "image": "easy-beef-hotpot.webp"
+        },
+        {
+            "name": "Easy chicken fajitas",
+            "description": "Need a simple, vibrant midweek meal the family will love? Put together these easy chicken fajitas and people can create their own masterpieces at the table",
+            "price": "14",
+            "image": "easy-chicken-fajitas.webp"
+        },
+        {
+            "name": "Easy huevos rancheros",
+            "description": "An easy Mexican breakfast that'll keep you going all morning, it's got everything you need to pep up your plate",
+            "price": "15.50",
+            "image": "easy-huevos-rancheros.webp"
+        },
+        {
+            "name": "Easy meatballs",
+            "description": "BBC Good Food magazine's food editor Barney & his daughter Maisie love making these sausage and beef meatballs to serve on spaghetti with hidden vegetable tomato sauce",
+            "price": "23",
+            "image": "easy-meatballs.webp"
+        },
+        {
+            "name": "Easy pancakes",
+            "description": "Learn a skill for life with our foolproof crêpe recipe that ensures perfect pancakes every time – elaborate flip optional",
+            "price": "12.50",
+            "image": "easy-pancakes.webp"
+        },
+        {
+            "name": "Frying pan pizza with aubergine, ricotta & mint",
+            "description": "This recipe ensures a crispy-bottomed pizza without ever turning on the oven. It's easy, veggie and 2 of your 5-a-day",
+            "price": "22",
+            "image": "frying-pan-pizza.webp"
+        },
+        {
+            "name": "One-pan spaghetti with nduja, fennel & olives",
+            "description": "A spicy sausage pasta dish with a difference. Using the cooking water helps the sauce cling to the pasta and gives the dish more body. A silky smooth sauce, perfect pasta and one pan to wash!",
+            "price": "32.70",
+            "image": "one-pan-spaghetti-with-nduja-fennel-olives-2308fb3.webp"
+        },
+        {
+            "name": "Piri-piri chicken with smashed sweet potatoes & broccoli",
+            "description": "Serve up an easy one-pan traybake of piri-piri chicken with sweet potatoes and broccoli. As well as being simple to make, it delivers three of your 5-a-day",
+            "price": "26",
+            "image": "piri-piri-chicken-with-smashed-sweet-potatoes-broccoli.webp"
+        },
+        {
+            "name": "Thai fried prawn & pineapple rice",
+            "description": "This quick, low calorie supper is perfect for a busy weeknight. Cook your rice in advance to get ahead - run it under cold water to chill quickly, then freeze in a food bag for up to one month",
+            "price": "18.65",
+            "image": "thai-fried-prawn.webp"
+        }
+    ]
+}
