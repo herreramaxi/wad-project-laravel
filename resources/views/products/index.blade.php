@@ -1,7 +1,6 @@
 @extends('shared.layout')
 @section('content')
 
-
 <link href="{{ mix('css/products/index.css') }}" rel="stylesheet">
 
 @section('javascript')

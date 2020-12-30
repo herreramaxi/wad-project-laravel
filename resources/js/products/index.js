@@ -83,12 +83,12 @@ $("#deleteModalForm").on("submit", function(e) {
         method: "DELETE",
         success: function(data) {
             $("#response").html(data);
-            showSuccessMessage("Product deleted");
+            showSuccessMessage("Menu deleted");
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus);
             console.log(errorThrown);
-            showErrorMessage("Error when trying to delete a product");
+            showErrorMessage("Error when trying to delete a menu");
         },
         complete: function(jqXHR, textStatus) {
             $("#deleteModal").modal("hide");
