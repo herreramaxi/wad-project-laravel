@@ -6,6 +6,7 @@
     "/css/spinner.css": "/css/spinner.css",
     "/css/productsClient/index.css": "/css/productsClient/index.css",
     "/css/productsClient/menusCarousel.css": "/css/productsClient/menusCarousel.css",
+    "/css/productsClient/menusCarouselMobile.css": "/css/productsClient/menusCarouselMobile.css",
     "/css/home.css": "/css/home.css",
     "/css/typeahead.css": "/css/typeahead.css",
     "/js/contact/index.js": "/js/contact/index.js",

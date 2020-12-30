@@ -1,4 +1,6 @@
-<link href="{{ mix('css/productsClient/menusCarousel.css') }}" rel="stylesheet">
+<link href="{{ mix('css/productsClient/menusCarousel.css') }}" rel="stylesheet" media='screen and (min-width: 601px)' >
+<link href="{{ mix('css/productsClient/menusCarouselMobile.css') }}" rel="stylesheet" media='screen and (max-width: 600px)' >
+
 <script src="{{ mix('js/productsClient/menusCarousel.js') }}" defer></script>
 
 <h3>Featured</h3>

@@ -44,6 +44,10 @@ mix.copyDirectory(
         "resources/sass/productsClient/menusCarousel.scss",
         "public/css/productsClient"
     )
+    .sass(
+        "resources/sass/productsClient/menusCarouselMobile.scss",
+        "public/css/productsClient"
+    )
     .sass("resources/sass/home/home.scss", "public/css")
     .postCss("resources/css/typeahead.css", "public/css");
 
