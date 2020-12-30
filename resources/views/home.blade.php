@@ -1,7 +1,7 @@
 @extends('shared.layout')
 @section('content')
 
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet" defer>
+    <link href="{{ mix('css/home.css') }}" rel="stylesheet" defer>
 
     <main role="main" class="inner cover">
         @php

@@ -15,25 +15,6 @@ class ProductsClientController extends Controller
         return view('productsClient.index');
     }
 
-
-    // public function show(Request $request)
-    // {
-    //     $products = null;
-    //     if($request->has('name'))
-    //     {
-    //         $products = Product::all();
-    //     }
-    //     $products = Product::where('name', 'LIKE', '%' . request('name') . '%')->get();
-    //     return view('productsClient.index', compact('products'));
-    // }
-
-    // public function search(Request $request)
-    // {
-    //     $search = $request->get('term');
-    //     $products = Product::where('name', 'LIKE', '%' . $search . '%')->get('name');
-    //     return response()->json($products);
-    // }
-
     public function searchAutocomplete(Request $request)
     {
         $products = null;
@@ -52,7 +33,6 @@ class ProductsClientController extends Controller
             $p = new Product();
             $p->name = $prod->name;
             $p->image = getImageSrc($prod);
-            // $p->description = $prod->description;
             return $p;
         });
 

@@ -1,7 +1,7 @@
 @extends('shared.layout')
 @section('content')
-<script src="{{ asset('js/products/index.js') }}" defer></script>
-<link href="{{ asset('css/products/index.css') }}" rel="stylesheet" defer>
+<script src="{{ mix('js/products/index.js') }}" defer></script>
+<link href="{{ mix('css/products/index.css') }}" rel="stylesheet" defer>
 
 <h1>Admin</h1>
 

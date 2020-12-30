@@ -1,9 +1,9 @@
 @extends('shared.layout')
 @section('content')
 
-<link href="{{ asset('css/productsClient/index.css') }}" rel="stylesheet" defer>
-<link href="{{ asset('css/typeahead.css') }}" rel="stylesheet" defer>
-<script src="{{ asset('js/productsClient/index.js') }}" defer></script>
+<link href="{{ mix('css/productsClient/index.css') }}" rel="stylesheet" defer>
+<link href="{{ mix('css/typeahead.css') }}" rel="stylesheet" defer>
+<script src="{{ mix('js/productsClient/index.js') }}" defer></script>
 
 <div class="container" id="productsClientContainer">
     <section class="Rsection section_welcome" data-parallax="scroll" data-image-src="assets/img/1.jpg">
