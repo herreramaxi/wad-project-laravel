@@ -26,10 +26,14 @@ function search() {
     });
 }
 
-$(document).on("search", "#searchInput", function(event) {
-    search();
-});
-
 $(function() {
     search();
+
+    $(document).on("search", "#searchInput", function(event) {
+        search();
+    });
+
+    $("#searchInput").on("typeahead:selected", function(evt, item) {
+        search();
+    });
 });
