@@ -1,4 +1,6 @@
+@section('javascript')
 <script src="{{ mix('js/products/edit.js') }}" defer></script>
+@endsection
 
 <form id="editModalForm" method="post" action="{{ route('products.update', $product->id) }}"
     enctype="multipart/form-data" class="needs-validation" novalidate>

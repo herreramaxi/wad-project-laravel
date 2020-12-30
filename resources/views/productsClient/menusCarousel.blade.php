@@ -1,5 +1,8 @@
-<link href="{{ mix('css/productsClient/menusCarousel.css') }}" rel="stylesheet" defer>
-<script src="{{ mix('js/productsClient/menusCarousel.js') }}" defer></script>
+<link href="{{ mix('css/productsClient/menusCarousel.css') }}" rel="stylesheet">
+
+@section('javascript')
+<script src="{{ mix('js/productsClient/menusCarousel.js') }}" async></script>
+@endsection
 
 <h3>Featured</h3>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

@@ -1,4 +1,7 @@
+@section('javascript')
 <script src="{{ mix('js/products/edit.js') }}" defer></script>
+@endsection
+
 <form id="createModalForm" method="post" action="{{ route('products.store') }}" enctype="multipart/form-data"
     class="needs-validation" novalidate>
     {{ csrf_field() }}

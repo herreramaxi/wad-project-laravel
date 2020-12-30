@@ -1,10 +1,13 @@
 @extends('shared.layout')
 @section('content')
 
-<link href="{{ mix('css/productsClient/index.css') }}" rel="stylesheet" defer>
-<link href="{{ mix('css/typeahead.css') }}" rel="stylesheet" defer>
+<link href="{{ mix('css/productsClient/index.css') }}" rel="stylesheet">
+<link href="{{ mix('css/typeahead.css') }}" rel="stylesheet">
+
+@section('javascript')
 <script src="{{ mix('js/productsClient/index.js') }}" defer></script>
 <script src="{{ mix('js/productsClient/indexNonCritical.js') }}" defer></script>
+@endsection
 
 <div class="container" id="productsClientContainer">
     <section class="Rsection section_welcome" data-parallax="scroll" data-image-src="assets/img/1.jpg">
