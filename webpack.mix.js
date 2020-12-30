@@ -24,6 +24,10 @@ mix.copyDirectory(
     .js("resources/js/products/edit.js", "public/js/products")
     .js("resources/js/productsClient/index.js", "public/js/productsClient")
     .js(
+        "resources/js/productsClient/indexNonCritical.js",
+        "public/js/productsClient"
+    )
+    .js(
         "resources/js/productsClient/menusCarousel.js",
         "public/js/productsClient"
     )
