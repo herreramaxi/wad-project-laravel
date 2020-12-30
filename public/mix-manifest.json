@@ -12,5 +12,6 @@
     "/js/products/edit.js": "/js/products/edit.js",
     "/js/products/index.js": "/js/products/index.js",
     "/js/productsClient/index.js": "/js/productsClient/index.js",
+    "/js/productsClient/menusCarousel.js": "/js/productsClient/menusCarousel.js",
     "/js/spinner.js": "/js/spinner.js"
 }

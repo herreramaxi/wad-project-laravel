@@ -18,8 +18,8 @@ mix.js('resources/js/app.js', 'public/js')
 mix.copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts');
 mix.js('resources/js/products/index.js', 'public/js/products');
 mix.js('resources/js/products/edit.js', 'public/js/products');
-// mix.js('resources/js/products/create.js', 'public/js/products');
 mix.js('resources/js/productsClient/index.js', 'public/js/productsClient');
+mix.js('resources/js/productsClient/menusCarousel.js', 'public/js/productsClient');
 mix.js('resources/js/spinner.js', 'public/js');
 mix.js('resources/js/alertMessages.js', 'public/js');
 mix.js('resources/js/contact/index.js', 'public/js/contact');
@@ -29,6 +29,5 @@ mix.sass('resources/sass/productsClient/index.scss', 'public/css/productsClient'
 mix.sass('resources/sass/productsClient/menusCarousel.scss', 'public/css/productsClient');
 mix.sass('resources/sass/home/home.scss', 'public/css');
 mix.postCss('resources/css/typeahead.css', 'public/css');
-// mix.js('node_modules/typeahead.js', 'public/js/typeahead');
 
 //.sourceMaps(); //adding debugging information
