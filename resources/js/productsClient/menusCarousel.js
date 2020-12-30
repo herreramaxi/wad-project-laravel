@@ -31,7 +31,7 @@ function renderCarouselForMobile(div, data) {
                 '<div class="row no-gutters">' +
                 '<div class="col-sm-12">' +
                 '<div class="card">' +
-                '<img src="{{ src}}" class="card-img-top  menu-image" />' +
+                '<img src="{{ src}}" class="card-img-top menu-image" loading="lazy"/>' +
                 '<div class="card-body">' +
                 '<h6 class="card-title text-truncate">{{name}}</h6>' +
                 '<p class="card-text text-truncate">{{ description}}</p>' +
@@ -78,7 +78,7 @@ function renderCarouselForDesktop(div, data) {
         html += htmlFormat('<div class="card">');
 
         html += htmlFormat(
-            '<img src="{{src}}" class="card-img-top menu-image" />',
+            '<img src="{{src}}" class="card-img-top menu-image" loading="lazy"/>',
             { src: val.src }
         );
 

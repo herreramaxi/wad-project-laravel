@@ -27,7 +27,7 @@
             <div class="carousel-inner">
                 @foreach ($json['images'] as $key => $value)
                     <div class="carousel-item {{ $key == 1 ? 'active' : '' }}">
-                        <img src="{{ $value['imagePath'] }}" class="d-block w-100" alt=".img_home">
+                        <img src="{{ $value['imagePath'] }}" class="d-block w-100" alt=".img_home" loading="lazy">
                         <div class="carousel-caption d-none d-md-block bg-dark mb-4">
                             <h5>{{ $value['heading'] }}</h5>
                             <p>{{ $value['description'] }}</p>
