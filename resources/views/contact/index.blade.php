@@ -1,6 +1,9 @@
 @extends('shared.layout')
 @section('content')
+
+@section('javascript')
 <script src="{{ asset('js/contact/index.js') }}" defer></script>
+@endsection
 
 <br>
 <h2 class="text-center">
