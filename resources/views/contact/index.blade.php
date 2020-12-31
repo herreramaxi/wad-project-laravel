@@ -5,8 +5,7 @@
 <script src="{{ asset('js/contact/index.js') }}" defer></script>
 @endsection
 
-<br>
-<h2 class="text-center">
+<h2 class="text-center pt-3">
   Do You have any Queries?
 </h2>
 <p class="lead text-center">

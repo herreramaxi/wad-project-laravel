@@ -7,7 +7,7 @@
 <script src="{{ mix('js/products/index.js') }}" defer></script>
 @endsection
 
-<h1>Admin</h1>
+<h2 class="pt-3">Admin</h2>
 
 <div class="row">
 

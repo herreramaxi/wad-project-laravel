@@ -9,8 +9,8 @@
 <script src="{{ mix('js/productsClient/indexNonCritical.js') }}" defer></script>
 @endsection
 
-<div class="container" id="productsClientContainer">
-    <section class="Rsection section_welcome" data-parallax="scroll" data-image-src="assets/img/1.jpg">
+<div class="container pt-3" id="productsClientContainer">
+    <section class="section_welcome" data-parallax="scroll">
 
         <div class="row">
             <div class="col-12">
