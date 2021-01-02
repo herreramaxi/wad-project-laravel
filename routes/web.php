@@ -4,6 +4,7 @@ use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsClientController;
 use App\Http\Controllers\ContactUsController;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
