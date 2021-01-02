@@ -4,11 +4,11 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-   
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             @php
-            
+
             $path = "json/navData.json";
             $json = json_decode(file_get_contents($path), true);
             @endphp
@@ -41,7 +41,7 @@
 
         <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ml-auto">
-            @guest          
+            @guest
 
             @env('local')
             <!-- Authentication Links: only shown on local environment (in PRODUCTION environment this is hidden). -->
@@ -74,6 +74,9 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
+                    @if (Route::has('register'))
+                    <a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @endif
                 </div>
             </li>
             @endguest

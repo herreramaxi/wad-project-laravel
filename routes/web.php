@@ -38,7 +38,7 @@ Route::get('productsClient/search/{name?}', [ProductsClientController::class, 's
 Route::get('productsClient/searchAutocomplete/{query?}', [ProductsClientController::class, 'searchAutocomplete']);
 
 if (App::environment('production')) {
-    Auth::routes(['register' => false, 'reset' => false, 'confirm' => false]);
+    Auth::routes(['reset' => false, 'confirm' => false]);
 } else {
     Auth::routes();
 }
