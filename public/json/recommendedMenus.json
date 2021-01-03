@@ -3,19 +3,19 @@
         {
             "name": "Mix seafood",
             "description": "Shellfish is a colloquial and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms. Although most kinds of shellfish are harvested from saltwater environments, some are found in freshwater.",
-            "price": "26",
+            "price": "26.50",
             "src": "/images/oysters.webp"
         },
         {
             "name": "Fresh oysters",
             "description": "A taster of fresh oysters served the old-fashioned way",
-            "price": "26",
+            "price": "21.99",
             "src": "/images/oysterrestauranthowth.webp"
         },
         {
             "name": "Irish stew",
             "description": "The trick with this classic one-pot is to use a cheaper cut of meat, which means you’ll skimp on price but not quality",
-            "price": "12",
+            "price": "16",
             "src": "/images/irish-stew.webp"
         },
         {
@@ -27,38 +27,38 @@
         {
             "name": "Smoked salmon",
             "description": "Co-op Irresistible beech and oak smoked salmon (100g)",
-            "price": "12",
+            "price": "18",
             "src": "/images/smoked-salmon.webp"
         },
 
         {
             "name": "Fish centrepiece",
             "description": "Booths oak roasted salmon centrepiece (750g)",
-            "price": "26",
+            "price": "21",
             "src": "/images/fish-centrpies.webp"
         },
         {
             "name": "Beef wellington",
             "description": "Waitrose Entertaining British beef wellington (1.4kg)",
-            "price": "26",
+            "price": "20",
             "src": "/images/beef-well.webp"
         },
         {
             "name": "Gammon",
             "description": "Tesco crackling gammon joint with maple & bourbon glaze (2.8kg)",
-            "price": "12",
+            "price": "28",
             "src": "/images/gammon.webp"
         },
         {
             "name": "Beef & Guinness stew with bacon dumplings",
             "description": "Cosy-up this winter with a hearty stew. This beef and Guinness casserole really packs in the flavour, and comes served with delicious bacon dumplings, cabbage and mash",
-            "price": "12",
+            "price": "20",
             "src": "/images/beef-guinness-stew-with-bacon-dumplings.webp"
         },
         {
             "name": "Steak & chips pie",
             "description": "Combine steak, chips, red wine gravy and wild mushrooms, then wrap it all up in a pie crust to enjoy one of the best mash-ups we’ve ever come up with",
-            "price": "12",
+            "price": "15",
             "src": "/images/steak-chips-pie.webp"
         },
         {
@@ -70,7 +70,7 @@
         {
             "name": "One-pot sausage casserole with garlic breadcrumbs",
             "description": "Take ‘sausages and beans’ from its modest midweek meal status and elevate it to an elegant one-pot casserole that’s special enough for entertaining",
-            "price": "12",
+            "price": "15",
             "src": "/images/Sausage-bean-casserole.webp"
         }
        

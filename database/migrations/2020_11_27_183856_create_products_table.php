@@ -23,8 +23,6 @@ class CreateProductsTable extends Migration
             $table->timestamps();
             $table->index('name');
         });
-
-        // DB::update("ALTER TABLE products AUTO_INCREMENT = 100;");
     }
 
     /**
