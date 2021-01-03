@@ -19,4 +19,6 @@
    * [JSON for rendering menus page's carousel](https://github.com/herreramaxi/wad-project-laravel/blob/main/public/json/recommendedMenus.json)
 - [webpack build steps](https://github.com/herreramaxi/wad-project-laravel/blob/main/webpack.mix.js)
 - [.htaccess: customization of Apache HTTP server behavior](https://github.com/herreramaxi/wad-project-laravel/blob/main/public/.htaccess)
-   
+  * [HTTPS redirect](https://github.com/herreramaxi/wad-project-laravel/blob/main/public/.htaccess#L23)
+  * [Compress HTML, CSS, JavaScript, Text, XML and fonts](https://github.com/herreramaxi/wad-project-laravel/blob/main/public/.htaccess#L28)
+  * [Cache](https://github.com/herreramaxi/wad-project-laravel/blob/main/public/.htaccess#L59)
