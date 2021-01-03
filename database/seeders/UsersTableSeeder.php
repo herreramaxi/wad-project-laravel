@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
         $user = new User();
         $user->name = "Admin";
         $user->email = "ncirl.wad.group4@gmail.com";
-        $user->password = '$2y$10$Jg0UxLUjIIN5JfVWly9dzejuVe9MxmtBUhIAocg8I86L3eKNZ0uC.';
+        $user->password =  env('ADMIN_PASSWORD');
         $user->save();
     }
 }
