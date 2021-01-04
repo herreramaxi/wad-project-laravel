@@ -54,6 +54,12 @@ class ProductsController extends Controller
 
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'name' => 'required|max:128',
+            'description' => 'required|max:512',
+            'price' => 'required',
+        ]);
+
         $product = new Product();
 
         $product->id = Product::max('id') + 1; //id is not being auto incremented by Eloquent + Postgres
@@ -110,6 +116,12 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validated = $request->validate([
+            'name' => 'required|max:128',
+            'description' => 'required|max:512',
+            'price' => 'required',
+        ]);
+        
         $product = Product::findOrFail($id);
 
         if (
