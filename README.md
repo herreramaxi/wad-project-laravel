@@ -1,4 +1,4 @@
-# WAD project 
+# WAD project: Food Delivery App
 ## Website links
  - [Home](https://wad-project-laravel.herokuapp.com/)
  - [Menus](https://wad-project-laravel.herokuapp.com/productsClient)
