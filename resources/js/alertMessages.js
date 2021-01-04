@@ -1,11 +1,19 @@
 module.exports = {
     showSuccessMessage: function(message) {
         $("#successMessageDiv").text(message);
-        $("#successMessageAlert").removeAttr("hidden");
+        $("#successMessageAlert").show();
     },
 
     showErrorMessage: function(message) {
         $("#errorMessageDiv").text(message);
-        $("#errorMessageAlert").removeAttr("hidden");
-    } 
-};
+        $("#errorMessageAlert").show();
+    }
+}; 
+
+$(document).on("click", "#errorMessageButtonClose", function(event) {
+    $("#errorMessageAlert").hide();
+});
+
+$(document).on("click", "#successMessageButtonClose", function(event) {
+      $("#successMessageAlert").hide();
+});
